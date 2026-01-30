@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://h63fjudivh8r"]
+
+[ext_resource type="Texture2D" uid="uid://bpydxhdg5mqgf" path="res://UI/MaskIMGs/BaseUIMask.png" id="1_fwrxg"]
+[ext_resource type="Script" uid="uid://ulfd11kj8j6w" path="res://UI/MaskIMGs/IngameUIControls.gd" id="1_telbt"]
+[ext_resource type="Texture2D" uid="uid://dihfkuypn42y" path="res://UI/MaskIMGs/NeutralUIMask.png" id="2_fwrxg"]
+[ext_resource type="Texture2D" uid="uid://cdm54yumflo8h" path="res://UI/MaskIMGs/MadUIMask.png" id="2_telbt"]
+[ext_resource type="Texture2D" uid="uid://3ymeh3mxyc4x" path="res://UI/MaskIMGs/SadUIMask.png" id="3_telbt"]
+[ext_resource type="Texture2D" uid="uid://l86xv2ssl4fc" path="res://UI/MaskIMGs/HappyUIMask.png" id="4_oky2f"]
+
+[node name="Control" type="Control" unique_id=1495935890 node_paths=PackedStringArray("state_image_1", "state_image_2", "state_image_3", "state_image_4", "color_image")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_telbt")
+state_image_1 = NodePath("MaskBase/Happy")
+state_image_2 = NodePath("MaskBase/Neutral")
+state_image_3 = NodePath("MaskBase/Mad")
+state_image_4 = NodePath("MaskBase/Sad")
+color_image = NodePath("MaskBase")
+editor_test_color = Color(0.97684973, 0.1802958, 0.4593975, 1)
+preview_color_in_editor = true
+
+[node name="MaskBase" type="TextureRect" parent="." unique_id=1383595527]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 380.0
+offset_right = 1124.0
+offset_bottom = 609.0
+texture = ExtResource("1_fwrxg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Happy" type="TextureRect" parent="MaskBase" unique_id=1773882128]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -112.5
+offset_right = 115.0
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oky2f")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Neutral" type="TextureRect" parent="MaskBase" unique_id=414930799]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -115.5
+offset_right = 115.0
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fwrxg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Mad" type="TextureRect" parent="MaskBase" unique_id=232593733]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -116.5
+offset_right = 115.0
+offset_bottom = 112.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_telbt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Sad" type="TextureRect" parent="MaskBase" unique_id=1661746792]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -118.5
+offset_right = 115.0
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_telbt")
+expand_mode = 1
+stretch_mode = 4
