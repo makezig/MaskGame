@@ -16,7 +16,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9046297, 0.80581224, -0.88909507)
 
 [node name="BottlePieces" parent="." unique_id=1231257873 instance=ExtResource("3_c77c4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3607218, 1.1300056, -0.8807964)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3607218, 0.89297104, -0.8807964)
 
 [node name="RegisterNode" parent="." unique_id=152637685 instance=ExtResource("3_o15vh")]
 transform = Transform3D(-3.5, 0, -3.059797e-07, 0, 3.5, 0, 3.059797e-07, 0, -3.5, -0.57808566, 0, -0.9435642)

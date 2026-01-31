@@ -6,10 +6,34 @@
 size = Vector3(0.07873535, 0.02822876, 0.14007568)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hd7dw"]
-size = Vector3(0.83226776, 0.25631714, 0.2510376)
+size = Vector3(0.83226776, 0.033920288, 0.2510376)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_77b4v"]
-size = Vector3(0.66967773, 0.031791687, 0.2539978)
+size = Vector3(0.68395996, 0.031791687, 0.2539978)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5twqu"]
+size = Vector3(1.5341644, 0.05657959, 0.025146484)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yxwrs"]
+size = Vector3(0.5685425, 0.2576294, 0.015380859)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xh3a5"]
+size = Vector3(0.0160141, 0.26538086, 0.2119751)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2tdj1"]
+size = Vector3(0.019165039, 0.014953613, 0.23339844)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78yut"]
+size = Vector3(0.3236084, 0.3590393, 0.6678467)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ggp4w"]
+size = Vector3(0.12719727, 0.25378418, 0.64889526)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jsccb"]
+size = Vector3(0.5383911, 0.02835083, 0.15625)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pldlo"]
+size = Vector3(0.5657959, 0.063446045, 0.15255737)
 
 [node name="RegisterNode" type="Node3D" unique_id=152637685]
 
@@ -35,9 +59,47 @@ target_position = Vector3(0, 0, -0.2)
 [node name="StaticBody3D" type="StaticBody3D" parent="Register" unique_id=1098551271]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=962533258]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4819069, 0.12669373, -0.00088500977)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4819069, 0.23789215, -0.00088500977)
 shape = SubResource("BoxShape3D_hd7dw")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=425358204]
-transform = Transform3D(0.99888986, 0.047106452, 0, -0.047106452, 0.99888986, 0, 0, 0, 1, 0.26947275, 0.22695264, 0.00016784668)
+transform = Transform3D(0.99888986, 0.047106452, 0, -0.047106452, 0.99888986, 0, 0, 0, 1, 0.27660593, 0.22661625, 0.00016784668)
 shape = SubResource("BoxShape3D_77b4v")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=807811171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13339996, 0.2383728, 0.11588156)
+shape = SubResource("BoxShape3D_5twqu")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=477092879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34933472, 0.13711548, -0.12005453)
+shape = SubResource("BoxShape3D_yxwrs")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=547710970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6263008, 0.13220215, -0.004547119)
+shape = SubResource("BoxShape3D_xh3a5")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=412277277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.88901395, 0.259552, -0.012207031)
+shape = SubResource("BoxShape3D_2tdj1")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=1730253560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7356097, 0.1782074, -0.44659424)
+shape = SubResource("BoxShape3D_78yut")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=569449153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5091553, 0.12713623, -0.452713)
+shape = SubResource("BoxShape3D_ggp4w")
+
+[node name="MoveArea" type="Area3D" parent="Register" unique_id=1639244255]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Register/MoveArea" unique_id=802455014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5283779, 0.2433654, -0.017578125)
+shape = SubResource("BoxShape3D_jsccb")
+debug_color = Color(0, 0.6, 0.05882353, 0.41960785)
+
+[node name="MoveArea2" type="Area3D" parent="Register" unique_id=1430623055]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Register/MoveArea2" unique_id=1723267558]
+transform = Transform3D(0.9991944, 0.040131792, 0, -0.040131792, 0.9991944, 0, 0, 0, 1, 0.21868567, 0.21233901, -0.015823364)
+shape = SubResource("BoxShape3D_pldlo")
+debug_color = Color(0, 0.6, 0.0627451, 0.41960785)
