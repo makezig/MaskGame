@@ -58,10 +58,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16242507, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003112793, 0.27009523, -0.020355225)
 shape = SubResource("BoxShape3D_opqah")
 
-[node name="RayCast3D" type="RayCast3D" parent="Register" unique_id=1411684239]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28534228, 0.2821345, 0.079612)
-target_position = Vector3(0, 0, -0.2)
-
 [node name="StaticBody3D" type="StaticBody3D" parent="Register" unique_id=1098551271]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Register/StaticBody3D" unique_id=962533258]
@@ -110,6 +106,10 @@ shape = SubResource("BoxShape3D_00afn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5283779, 0.2433654, -0.017578125)
 shape = SubResource("BoxShape3D_jsccb")
 debug_color = Color(0, 0.6, 0.05882353, 0.41960785)
+
+[node name="RayCast3D" type="RayCast3D" parent="Register/MoveArea" unique_id=1411684239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28534228, 0.2821345, 0.079612)
+target_position = Vector3(0, 0, -0.2)
 
 [node name="MoveArea2" type="Area3D" parent="Register" unique_id=1430623055]
 
