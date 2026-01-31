@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crcktgtfmray0"
-path="res://.godot/imported/BottlePieces.glb-4ae4448fe582adcfbebca9da1fb7bd63.scn"
+uid="uid://yupoye3i6pwj"
+path="res://.godot/imported/Arm.fbx-8ccd50a87d95c5a3d637a461951b74b8.scn"
 
 [deps]
 
-source_file="res://Assets/BottlePieces.glb"
-dest_files=["res://.godot/imported/BottlePieces.glb-4ae4448fe582adcfbebca9da1fb7bd63.scn"]
+source_file="res://Assets/Arm/Arm.fbx"
+dest_files=["res://.godot/imported/Arm.fbx-8ccd50a87d95c5a3d637a461951b74b8.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -38,5 +38,7 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-gltf/naming_version=2
-gltf/embedded_image_handling=1
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

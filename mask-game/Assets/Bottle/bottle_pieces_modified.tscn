@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cjiufv82rre1p"]
 
-[ext_resource type="Script" path="res://Assets/Explode.gd" id="1_d6mkf"]
+[ext_resource type="Script" uid="uid://cdwayameox7dy" path="res://Assets/Bottle/Explode.gd" id="1_d6mkf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0qcd"]
 resource_name = "Material"
@@ -1111,6 +1111,7 @@ points = PackedVector3Array(0.014585094, 0.40171868, 0.014459252, 0.013485591, 0
 
 [node name="BottlePieces" type="Node3D" unique_id=1231257873]
 script = ExtResource("1_d6mkf")
+INTENSITY = null
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1219184495]
 

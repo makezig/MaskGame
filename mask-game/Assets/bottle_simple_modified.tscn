@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://bhp20jc1btuby"]
-
-[ext_resource type="PackedScene" uid="uid://pk1c8ha8knq4" path="res://Assets/BottleSimple.glb" id="1_v5ecl"]
-[ext_resource type="Script" uid="uid://cwu5n6p34xhvv" path="res://Assets/Model_Shifter.gd" id="2_tuitb"]
-[ext_resource type="PackedScene" uid="uid://cjiufv82rre1p" path="res://Assets/bottle_pieces_modified.tscn" id="3_eukua"]
-
-[node name="BottleSimple" unique_id=1327773172 instance=ExtResource("1_v5ecl")]
-script = ExtResource("2_tuitb")
-broken_model = ExtResource("3_eukua")
