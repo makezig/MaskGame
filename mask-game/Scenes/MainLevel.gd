@@ -1,17 +1,43 @@
 extends Node3D
 
+#Refrences top Preload needing scenes
 @onready var hud_scene := preload("res://UI/IngameUI.tscn") 
 @onready var player_character := preload("res://Player/test.tscn")
+@onready var npc_scene := preload("res://Npc/npc.tscn")
 
+
+# Preload item scenes
+var items: Array = [
+	preload("res://Assets/bottle_pieces_modified.tscn")
+]
+
+
+#Scene refrences needed for gameloop
 const PAUSE_MENU_SCENE := "res://UI/PauseMenu.tscn"
+
+# Variables to control random spawning
+@export var min_items: int = 3
+@export var max_items: int = 7
+@export var item_spawn_radius: float = 5.0  # How far from the spawn point items can appear
+
+#Variables
 var pause_menu: Control = null
+@export var npc_spawn_point: Node3D
+@export var item_spawn_point: Node3D
 
 func _ready() -> void:
+	#Spawn HUD
 	var hud = hud_scene.instantiate()
 	add_child(hud)
 	
+	#Spawn Player
 	var player = player_character.instantiate()
 	add_child(player)
+	
+	# Spawn NPC at the specified Node3D spawn point
+	var test_npc = npc_scene.instantiate() as Node3D
+	test_npc.global_transform.origin = npc_spawn_point.global_transform.origin
+	add_child(test_npc)
 
 func _process(delta: float) -> void:
 	pass
@@ -23,6 +49,8 @@ func _input(event):
 		else:
 			show_pause_menu()
 
+
+#Pasuse Menu helper functions
 func show_pause_menu():
 	if pause_menu == null:
 		# Load the pause menu scene
@@ -40,3 +68,28 @@ func resume_game():
 		pause_menu.visible = false
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func spawn_items():
+	if not item_spawn_point:
+		push_warning("Item spawn point not assigned!")
+		return
+
+	# Decide how many items to spawn this call
+	var num_items = randi() % (max_items - min_items + 1) + min_items
+
+	for i in num_items:
+		# Pick a random item from the array
+		var random_index = randi() % items.size()
+		var item_scene = items[random_index]
+		var item_instance = item_scene.instantiate() as Node3D
+
+		# Pick a random position around the spawn point within a radius
+		var random_offset = Vector3(
+			randf_range(-item_spawn_radius, item_spawn_radius),
+			0,  # Keep Y the same (adjust if you want vertical variation)
+			randf_range(-item_spawn_radius, item_spawn_radius)
+		)
+		item_instance.global_transform.origin = item_spawn_point.global_transform.origin + random_offset
+
+		# Add to scene
+		add_child(item_instance)
