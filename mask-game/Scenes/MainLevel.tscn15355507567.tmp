@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://tf7a2weog7fv" path="res://Scenes/MainLevel.gd" id="1_8vsrk"]
 [ext_resource type="Script" uid="uid://bt4k48uxepvci" path="res://Npc/NpcPathController.gd" id="3_c77c4"]
 [ext_resource type="PackedScene" path="res://Scenes/Register_Scene.tscn" id="3_o15vh"]
+[ext_resource type="PackedScene" uid="uid://6axwf1hioidv" path="res://Npc/npc.tscn" id="4_o15vh"]
 
 [sub_resource type="Sky" id="Sky_c77c4"]
 
@@ -28,6 +29,13 @@ size = Vector3(47.36786, 1.4633789, 35.569702)
 size = Vector3(57.776184, 15.476379, 3.7717857)
 
 [sub_resource type="BoxMesh" id="BoxMesh_c77c4"]
+
+[sub_resource type="Curve3D" id="Curve3D_8vsrk"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0.29, 0, 0, 1.5532491, 0.11574501, 0.72944856, 0, 0, 0, 0.29, 0, 0, -1.6666596, 0.06730217, 0.88572955, 0, 0, 0, 0, 0, 0, -5.430382, 0, 0.93449664),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
 
 [node name="SceneRoot" type="Node3D" unique_id=612120488]
 script = ExtResource("1_8vsrk")
@@ -124,24 +132,36 @@ shape = SubResource("BoxShape3D_c77c4")
 transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 1.6580405, 5.871557, -7.5355616)
 mesh = SubResource("BoxMesh_c77c4")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1139888936 node_paths=PackedStringArray("spawn", "tiller", "exit", "player_marker")]
+[node name="Path3D" type="Path3D" parent="." unique_id=508243083 node_paths=PackedStringArray("path", "player", "stops_container")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2583082, 0.059798777, -4.2344236)
+curve = SubResource("Curve3D_8vsrk")
+debug_custom_color = Color(0.79490966, 0, 0.18123418, 1)
 script = ExtResource("3_c77c4")
-spawn = NodePath("Spawn")
-tiller = NodePath("Tiller")
-exit = NodePath("Exit")
-player_marker = NodePath("PlayersPos")
-tiller_wait_time = 5.0
+npc_scene = ExtResource("4_o15vh")
+path = NodePath(".")
+player = NodePath("../PlayersPos")
+stops_container = NodePath("Stops")
+move_speed = null
+turn_speed = null
+stop_distance = null
+stop_wait_time = null
+debug_auto_move = true
 
-[node name="PlayersPos" type="Node3D" parent="Node3D" unique_id=1668226425]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38341355, 0.42387414, -0.56813055)
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=981305559]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.99999994, 0, 1, 0, -4.371139e-08, 1.5532491, 0.11574501, 0.72944856)
 
-[node name="Spawn" type="Node3D" parent="Node3D" unique_id=423628643]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.574211, 0, -3.4427729)
+[node name="Stops" type="Node3D" parent="Path3D" unique_id=1743729937]
 
-[node name="Tiller" type="Node3D" parent="Node3D" unique_id=1134180667]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5017804, 0, -3.3438835)
+[node name="StopPoint1" type="Node3D" parent="Path3D/Stops" unique_id=555100533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5730255, 0, 0.7648039)
 
-[node name="Exit" type="Node3D" parent="Node3D" unique_id=1143550449]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3200245, 0, -3.785883)
+[node name="StopPoint2" type="Node3D" parent="Path3D/Stops" unique_id=866726309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8477373, 0, 0.91059995)
+
+[node name="StopPoint3" type="Node3D" parent="Path3D/Stops" unique_id=9752526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.400858, 0, 0.91059995)
+
+[node name="PlayersPos" type="Node3D" parent="." unique_id=1668226425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4522238, 1.5093442, -0.8454091)
 
 [editable path="RegisterNode"]

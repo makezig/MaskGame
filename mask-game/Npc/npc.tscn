@@ -15,6 +15,11 @@
 albedo_color = Color(0.9388407, 0, 0.2378011, 1)
 
 [node name="NPC" type="RigidBody3D" unique_id=285974461 node_paths=PackedStringArray("Mask1", "Mask2", "Mask3", "Mask4", "Mask5")]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 script = ExtResource("1_3gw2r")
 Mask1 = NodePath("Mask1")
 Mask2 = NodePath("Mask2")
@@ -23,30 +28,30 @@ Mask4 = NodePath("Mask4")
 Mask5 = NodePath("Mask5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393200343]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0058343, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.0058343, 0)
 shape = SubResource("CapsuleShape3D_v7lw1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1266769039]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0058343, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.0058343, 0)
 mesh = SubResource("CapsuleMesh_v7lw1")
 surface_material_override/0 = SubResource("StandardMaterial3D_3gw2r")
 
 [node name="Mask1" parent="." unique_id=41679832 instance=ExtResource("2_68noj")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.47261572, 0.92496604, 0)
+transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 0.035321474, 0.85250765, -0.54722214)
 visible = false
 
 [node name="Mask2" parent="." unique_id=819310686 instance=ExtResource("3_8mcy2")]
-transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.54, 1.3928343, -0.001)
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, 0.10270578, 1.3203759, -0.5482221)
 visible = false
 
 [node name="Mask3" parent="." unique_id=947816533 instance=ExtResource("4_u222f")]
-transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.49589193, 1.373777, 0.002273202)
+transform = Transform3D(-4.152582e-09, 0, 0.095, 0, 0.095, 0, -0.095, 0, -4.152582e-09, 0.058597684, 1.3013186, -0.54494894)
 visible = false
 
 [node name="Mask4" parent="." unique_id=940173844 instance=ExtResource("5_1a4uc")]
-transform = Transform3D(0.10490006, 0, 0.0045800353, 0, 0.105, 0, -0.0045800353, 0, 0.10490006, 0.5318881, 1.3425183, -0.031114042)
+transform = Transform3D(-4.5896957e-09, 0, 0.105000004, 0, 0.105, 0, -0.105000004, 0, -4.5896957e-09, 0.09459388, 1.27006, -0.5783362)
 visible = false
 
 [node name="Mask5" parent="." unique_id=92043339 instance=ExtResource("6_ln1k7")]
-transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0.55330014, 1.4257021, -0.014565289)
+transform = Transform3D(-7.430936e-09, 0, 0.17, 0, 0.17, 0, -0.17, 0, -7.430936e-09, 0.1160059, 1.3532437, -0.5617874)
 visible = false

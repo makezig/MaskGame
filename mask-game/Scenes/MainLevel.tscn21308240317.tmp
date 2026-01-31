@@ -124,24 +124,22 @@ shape = SubResource("BoxShape3D_c77c4")
 transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 1.6580405, 5.871557, -7.5355616)
 mesh = SubResource("BoxMesh_c77c4")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1139888936 node_paths=PackedStringArray("spawn", "tiller", "exit", "player_marker")]
+[node name="Node3D" type="Node3D" parent="." unique_id=1139888936 node_paths=PackedStringArray("spawn", "tiller", "exit")]
 script = ExtResource("3_c77c4")
 spawn = NodePath("Spawn")
 tiller = NodePath("Tiller")
 exit = NodePath("Exit")
-player_marker = NodePath("PlayersPos")
-tiller_wait_time = 5.0
 
 [node name="PlayersPos" type="Node3D" parent="Node3D" unique_id=1668226425]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38341355, 0.42387414, -0.56813055)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15744996, 1.3553197, -0.72666186)
 
 [node name="Spawn" type="Node3D" parent="Node3D" unique_id=423628643]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.574211, 0, -3.4427729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.871011, 0, -4.129449)
 
 [node name="Tiller" type="Node3D" parent="Node3D" unique_id=1134180667]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5017804, 0, -3.3438835)
 
 [node name="Exit" type="Node3D" parent="Node3D" unique_id=1143550449]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3200245, 0, -3.785883)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1566787, 0, -3.785883)
 
 [editable path="RegisterNode"]
