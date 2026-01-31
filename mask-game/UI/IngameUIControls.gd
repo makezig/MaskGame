@@ -9,6 +9,7 @@ enum UIState {
 
 @export var current_state: UIState = UIState.HAPPY
 @export var default_color: Color = Color.WEB_GREEN
+@export var fail_count_text: String = "Testing"
 
 @onready var state_images: Array[TextureRect] = [
 	$Happy,
@@ -17,11 +18,17 @@ enum UIState {
 	$Sad
 ]
 
+@onready var fail_label = $FailCounter
+
 @onready var color_image: TextureRect = $Color
 
 func _ready():
 	update_state_visuals()
 	set_color_image_color(default_color)
+	set_failcounter(9)
+
+func set_failcounter(count: int):
+	fail_label.text = fail_count_text + str(count)
 
 #Call if you want to update both face and color
 func uppdate_rage_mask(state: UIState, color: Color):

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdm54yumflo8h" path="res://UI/MaskIMGs/MadUIMask.png" id="2_telbt"]
 [ext_resource type="Texture2D" uid="uid://3ymeh3mxyc4x" path="res://UI/MaskIMGs/SadUIMask.png" id="3_telbt"]
 [ext_resource type="Texture2D" uid="uid://l86xv2ssl4fc" path="res://UI/MaskIMGs/HappyUIMask.png" id="4_oky2f"]
+[ext_resource type="FontFile" uid="uid://bouybuirdjx5e" path="res://Fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf" id="7_oky2f"]
 
 [node name="Control" type="Control" unique_id=1495935890]
 layout_mode = 3
@@ -18,6 +19,7 @@ grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("1_telbt")
 default_color = Color(1.0468439e-06, 0.3392984, 0.18626127, 1)
+fail_count_text = "Fails left: "
 
 [node name="Color" type="TextureRect" parent="." unique_id=1383595527]
 layout_mode = 0
@@ -99,3 +101,13 @@ grow_vertical = 2
 texture = ExtResource("3_telbt")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="FailCounter" type="Label" parent="." unique_id=648565925]
+layout_mode = 0
+offset_left = -1117.0
+offset_top = -616.0
+offset_right = -729.0
+offset_bottom = -536.0
+theme_override_fonts/font = ExtResource("7_oky2f")
+theme_override_font_sizes/font_size = 52
+text = "Test Text"
