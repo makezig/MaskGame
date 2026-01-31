@@ -25,9 +25,19 @@ func _process(delta: float) -> void:
 
 
 func npc_item_spawn_loop(delta: float):
+	#spawn item to spawn point
+	#spawn next when last item was scanned (beeped)
+	
 	pass
 
 func boss_timer(delta: float):
+	boss_clock -= delta
+	if boss_clock <= 0:
+		# toggle_active_to_inactive
+		boss.toggle_active_inactive()
+		#reset timer
+		boss_clock = 5
+		
 	pass
 
 func mood_degradation(delta: float):
