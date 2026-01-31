@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://6axwf1hioidv"]
+
+[ext_resource type="Script" uid="uid://b3o705sp6q5ub" path="res://Npc/NPCScript.gd" id="1_3gw2r"]
+[ext_resource type="PackedScene" uid="uid://cjhkygkk5llpf" path="res://Npc/NPCMasks/Mask1.fbx" id="2_68noj"]
+[ext_resource type="PackedScene" uid="uid://ddc8nrqu8uow2" path="res://Npc/NPCMasks/Mask2.fbx" id="3_8mcy2"]
+[ext_resource type="PackedScene" uid="uid://dk5j50ve70xyb" path="res://Npc/NPCMasks/Mask3.fbx" id="4_u222f"]
+[ext_resource type="PackedScene" uid="uid://c5p6rnxqd6f30" path="res://Npc/NPCMasks/Mask4.fbx" id="5_1a4uc"]
+[ext_resource type="PackedScene" uid="uid://ddi1sehi2x3w5" path="res://Npc/NPCMasks/Mask5.fbx" id="6_ln1k7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v7lw1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v7lw1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3gw2r"]
+albedo_color = Color(0.9388407, 0, 0.2378011, 1)
+
+[node name="NPC" type="RigidBody3D" unique_id=285974461 node_paths=PackedStringArray("Mask1", "Mask2", "Mask3", "Mask4", "Mask5")]
+script = ExtResource("1_3gw2r")
+Mask1 = NodePath("Mask1")
+Mask2 = NodePath("Mask2")
+Mask3 = NodePath("Mask3")
+Mask4 = NodePath("Mask4")
+Mask5 = NodePath("Mask5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=393200343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0058343, 0)
+shape = SubResource("CapsuleShape3D_v7lw1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1266769039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0058343, 0)
+mesh = SubResource("CapsuleMesh_v7lw1")
+surface_material_override/0 = SubResource("StandardMaterial3D_3gw2r")
+
+[node name="Mask1" parent="." unique_id=41679832 instance=ExtResource("2_68noj")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.47261572, 0.92496604, 0)
+visible = false
+
+[node name="Mask2" parent="." unique_id=819310686 instance=ExtResource("3_8mcy2")]
+transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.54, 1.3928343, -0.001)
+visible = false
+
+[node name="Mask3" parent="." unique_id=947816533 instance=ExtResource("4_u222f")]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.49589193, 1.373777, 0.002273202)
+visible = false
+
+[node name="Mask4" parent="." unique_id=940173844 instance=ExtResource("5_1a4uc")]
+transform = Transform3D(0.10490006, 0, 0.0045800353, 0, 0.105, 0, -0.0045800353, 0, 0.10490006, 0.5318881, 1.3425183, -0.031114042)
+visible = false
+
+[node name="Mask5" parent="." unique_id=92043339 instance=ExtResource("6_ln1k7")]
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0.55330014, 1.4257021, -0.014565289)
+visible = false
