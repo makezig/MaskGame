@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://blg57qo672w3u"]
+
+[ext_resource type="Script" uid="uid://beyhw7jty2oyg" path="res://UI/MainMenuScript.gd" id="1_uahxu"]
+
+[node name="MainMenu" type="Control" unique_id=2022857961]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="Control" parent="." unique_id=296897060]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -174.0
+offset_right = 300.0
+offset_bottom = 176.0
+grow_vertical = 2
+script = ExtResource("1_uahxu")
+
+[node name="StartButton" type="Button" parent="Buttons" unique_id=2122975341]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 75.0
+grow_horizontal = 2
+text = "Start"
+
+[node name="CreditsButton" type="Button" parent="Buttons" unique_id=243894096]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 100.0
+offset_right = 100.0
+offset_bottom = 175.0
+grow_horizontal = 2
+text = "Credits
+"
+
+[node name="QuitButton" type="Button" parent="Buttons" unique_id=1565280647]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 200.0
+offset_right = 100.0
+offset_bottom = 275.0
+grow_horizontal = 2
+text = "Quit"
+
+[node name="CreditsLabel" type="Label" parent="Buttons" unique_id=1648397886]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 46.0
+offset_top = -160.0
+offset_right = 496.0
+offset_bottom = 90.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "William - UI
+Markus - 3D modeling
+..."
