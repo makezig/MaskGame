@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8uvjtc55hj4x"]
 
-[ext_resource type="PackedScene" uid="uid://b28u5pyvnpd1d" path="res://Assets/bottle_pieces_modified.tscn" id="1_ti2us"]
+[ext_resource type="PackedScene" uid="uid://bhp20jc1btuby" path="res://Assets/bottle_simple_modified.tscn" id="1_ti2us"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wbm7n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,6 +42,5 @@ shape = SubResource("BoxShape3D_ymfeu")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=577185469]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55761385, 0.35674787, -1.1244555)
 
-[node name="BottlePieces" parent="." unique_id=1231257873 instance=ExtResource("1_ti2us")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31829524, 0.014952898, -1.6087639)
-INTENSITY = 100.0
+[node name="BottleSimple" parent="." unique_id=1327773172 instance=ExtResource("1_ti2us")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6317482, 0.0057983156, -1.9989046)
