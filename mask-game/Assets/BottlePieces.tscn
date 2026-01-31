@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://us5pb65lw5h6"]
+
+[ext_resource type="PackedScene" uid="uid://crcktgtfmray0" path="res://Assets/BottlePieces.glb" id="1_lgqab"]
+
+[node name="BottlePieces" unique_id=1231257873 instance=ExtResource("1_lgqab")]

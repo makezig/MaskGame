@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://b8uvjtc55hj4x"]
+
+[ext_resource type="PackedScene" uid="uid://b28u5pyvnpd1d" path="res://Assets/bottle_pieces_modified.tscn" id="1_ti2us"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wbm7n"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_es70n"]
+sky_material = SubResource("ProceduralSkyMaterial_wbm7n")
+
+[sub_resource type="Environment" id="Environment_1llu6"]
+background_mode = 2
+sky = SubResource("Sky_es70n")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_plgh6"]
+size = Vector2(30, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ymfeu"]
+size = Vector3(30, 1, 30)
+
+[node name="CollisionTesting" type="Node" unique_id=2087536691]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=782738250]
+environment = SubResource("Environment_1llu6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021700887]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=850952167]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=407518245]
+mesh = SubResource("PlaneMesh_plgh6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1782155415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4975617, 0)
+shape = SubResource("BoxShape3D_ymfeu")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=577185469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55761385, 0.35674787, -1.1244555)
+
+[node name="BottlePieces" parent="." unique_id=1231257873 instance=ExtResource("1_ti2us")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31829524, 0.014952898, -1.6087639)
+INTENSITY = 100.0
