@@ -31,6 +31,7 @@ func _ready() -> void:
 	#Spawn Player
 	var player = player_character.instantiate()
 	add_child(player)
+	player.global_position += Vector3(.5,0,-.2)
 
 func _process(delta: float) -> void:
 	pass

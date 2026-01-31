@@ -17,7 +17,7 @@ target_position = Vector3(0, 0, -4)
 collision_mask = 3
 
 [node name="Hand" type="Node3D" parent="." unique_id=120060338]
-transform = Transform3D(0.2633939, 0, 0, 0, 0.4187652, 0, 0, 0, 0.785, 0.73836833, -0.57907677, -1.3141142)
+transform = Transform3D(0.263, 0, 0, 0, 0.419, 0, 0, 0, 0.495, 0.73836833, -0.57907724, -1.0315384)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Hand" unique_id=2076345197]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.44940853)

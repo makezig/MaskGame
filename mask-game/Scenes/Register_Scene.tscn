@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dsbyxsxnb7ci4"]
+[gd_scene format=3 uid="uid://d1suiasio656j"]
 
 [ext_resource type="PackedScene" uid="uid://delv4jwkbhml6" path="res://Assets/Register.fbx" id="1_opqah"]
 [ext_resource type="Script" uid="uid://dfragua3lg5co" path="res://Scenes/move_area.gd" id="2_hd7dw"]
@@ -109,10 +109,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5283779, 0.2433654, -0.017
 shape = SubResource("BoxShape3D_jsccb")
 debug_color = Color(0, 0.6, 0.05882353, 0.41960785)
 
-[node name="RayCast3D" type="RayCast3D" parent="Register/MoveArea" unique_id=1411684239]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28534228, 0.2821345, 0.079612)
-target_position = Vector3(0, 0, -0.2)
-
 [node name="MoveArea2" type="Area3D" parent="Register" unique_id=1430623055]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Register/MoveArea2" unique_id=1723267558]
@@ -121,3 +117,4 @@ shape = SubResource("BoxShape3D_pldlo")
 debug_color = Color(0, 0.6, 0.0627451, 0.41960785)
 
 [connection signal="body_entered" from="Register/MoveArea" to="Register/MoveArea" method="_on_body_entered"]
+[connection signal="body_exited" from="Register/MoveArea" to="Register/MoveArea" method="_on_body_exited"]
