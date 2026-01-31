@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bhp20jc1btuby"]
+
+[ext_resource type="PackedScene" uid="uid://pk1c8ha8knq4" path="res://Assets/BottleSimple.glb" id="1_v5ecl"]
+
+[node name="BottleSimple" unique_id=1327773172 instance=ExtResource("1_v5ecl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01668024, 0)
