@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://tf7a2weog7fv" path="res://Scenes/MainLevel.gd" id="1_8vsrk"]
 [ext_resource type="PackedScene" uid="uid://delv4jwkbhml6" path="res://Assets/Register.fbx" id="1_r7jfx"]
 
-[node name="SceneRoot" type="Node3D" unique_id=612120488]
+[node name="SceneRoot" type="Node3D" unique_id=612120488 node_paths=PackedStringArray("npc_spawn_point")]
 script = ExtResource("1_8vsrk")
+npc_spawn_point = NodePath("NPCSpawnPoint")
 
 [node name="Register" parent="." unique_id=352794152 instance=ExtResource("1_r7jfx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2323991, -1.1920929e-07, 0.6244836)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.5519838, -1.1920929e-07, 1.0610983)
+
+[node name="NPCSpawnPoint" type="Node3D" parent="." unique_id=1552381878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.931649, 0, 2.1373558)
