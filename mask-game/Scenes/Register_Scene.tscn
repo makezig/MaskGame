@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://d1suiasio656j"]
+
+[ext_resource type="PackedScene" uid="uid://delv4jwkbhml6" path="res://Assets/Register.fbx" id="1_opqah"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_opqah"]
+size = Vector3(0.07873535, 0.02822876, 0.14007568)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hd7dw"]
+size = Vector3(0.5666199, 0.0068359375, 0.15374756)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77b4v"]
+size = Vector3(0.5375061, 0.02368164, 0.15701294)
+
+[node name="Node3D" type="Node3D" unique_id=152637685]
+
+[node name="Register" parent="." unique_id=1777483655 instance=ExtResource("1_opqah")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Register" unique_id=871991636]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.1652402, 0.26218814, -0.02952043)
+light_color = Color(0.95686275, 0.19607843, 0.18431373, 1)
+spot_range = 0.11520543
+spot_angle = 73.125
+
+[node name="Beeper" type="Area3D" parent="Register" unique_id=2102929227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16242507, 0, 0)
+
+[node name="BeepArea" type="CollisionShape3D" parent="Register/Beeper" unique_id=2025760304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003112793, 0.27009523, -0.020355225)
+shape = SubResource("BoxShape3D_opqah")
+
+[node name="belt2" type="Area3D" parent="Register" unique_id=1782264722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21399906, 0.26132005, 0)
+
+[node name="BeltShape2" type="CollisionShape3D" parent="Register/belt2" unique_id=1448639211]
+transform = Transform3D(0.9991944, 0.040131792, 0, -0.040131792, 0.9991944, 0, 0, 0, 1, 0.0051730424, -0.021528855, -0.015472412)
+shape = SubResource("BoxShape3D_hd7dw")
+
+[node name="belt1" type="Area3D" parent="Register" unique_id=1713327402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5259646, 0.25201163, 0)
+
+[node name="BeltShape1" type="CollisionShape3D" parent="Register/belt1" unique_id=294350665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0007171631, -0.01184082, -0.016067505)
+shape = SubResource("BoxShape3D_77b4v")
+
+[node name="RayCast3D" type="RayCast3D" parent="Register" unique_id=1411684239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28534228, 0.2821345, 0.079612)
+target_position = Vector3(0, 0, -0.2)
