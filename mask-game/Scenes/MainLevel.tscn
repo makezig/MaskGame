@@ -1,18 +1,24 @@
 [gd_scene format=3 uid="uid://bx4gdl8xphuli"]
 
 [ext_resource type="Script" uid="uid://tf7a2weog7fv" path="res://Scenes/MainLevel.gd" id="1_8vsrk"]
-[ext_resource type="PackedScene" uid="uid://delv4jwkbhml6" path="res://Assets/Register.fbx" id="1_r7jfx"]
+[ext_resource type="PackedScene" path="res://Assets/bottle_pieces_modified.tscn" id="3_c77c4"]
+[ext_resource type="PackedScene" uid="uid://d1suiasio656j" path="res://Scenes/Register_Scene.tscn" id="3_o15vh"]
 
 [node name="SceneRoot" type="Node3D" unique_id=612120488 node_paths=PackedStringArray("npc_spawn_point", "item_spawn_point")]
 script = ExtResource("1_8vsrk")
 npc_spawn_point = NodePath("NPCSpawnPoint")
 item_spawn_point = NodePath("ItemSpawnPoint")
 
-[node name="Register" parent="." unique_id=352794152 instance=ExtResource("1_r7jfx")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.5519838, -1.1920929e-07, 1.0610983)
-
 [node name="NPCSpawnPoint" type="Node3D" parent="." unique_id=1552381878]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.931649, 0, 2.1373558)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.0865657, 0, -2.3889146)
 
 [node name="ItemSpawnPoint" type="Node3D" parent="." unique_id=1640993493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5171952, 0.80581224, 1.083921)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9046297, 0.80581224, -0.88909507)
+
+[node name="BottlePieces" parent="." unique_id=1231257873 instance=ExtResource("3_c77c4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3607218, 1.1300056, -0.8807964)
+
+[node name="RegisterNode" parent="." unique_id=152637685 instance=ExtResource("3_o15vh")]
+transform = Transform3D(-3.5, 0, -3.059797e-07, 0, 3.5, 0, 3.059797e-07, 0, -3.5, -0.57808566, 0, -0.9435642)
+
+[editable path="RegisterNode"]
