@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bx4gdl8xphuli"]
 
+[ext_resource type="Script" uid="uid://tf7a2weog7fv" path="res://Scenes/MainLevel.gd" id="1_8vsrk"]
 [ext_resource type="PackedScene" uid="uid://delv4jwkbhml6" path="res://Assets/Register.fbx" id="1_r7jfx"]
 
-[node name="Node3D" type="Node3D" unique_id=612120488]
+[node name="SceneRoot" type="Node3D" unique_id=612120488]
+script = ExtResource("1_8vsrk")
 
 [node name="Register" parent="." unique_id=352794152 instance=ExtResource("1_r7jfx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2323991, -1.1920929e-07, 0.6244836)
