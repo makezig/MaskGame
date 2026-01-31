@@ -22,7 +22,3 @@ func _ready():
 	var random_index = randi() % masks.size()
 	if masks[random_index]:
 		masks[random_index].visible = true
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

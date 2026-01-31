@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ceo6v3cox77eb"]
+
+[ext_resource type="Script" uid="uid://dul4fmsxhlvtn" path="res://Player/player.gd" id="1_3qydi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_q3lat"]
+
+[node name="Player" type="Node3D" unique_id=60110183]
+script = ExtResource("1_3qydi")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1837133306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1231978, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=2088946914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74568605, -0.43850374, 0)
+target_position = Vector3(0, 0, -4)
+collision_mask = 3
+
+[node name="Hand" type="Node3D" parent="." unique_id=120060338]
+transform = Transform3D(0.2633939, 0, 0, 0, 0.17989154, 0, 0, 0, 0.785, 0.73836833, 1.5521978, -1.3141142)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hand" unique_id=2076345197]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.44940853)
+mesh = SubResource("BoxMesh_q3lat")
