@@ -19,4 +19,4 @@ func _on_body_entered(body: Node3D) -> void:
 
 func _physics_process(delta: float) -> void:
 	if body_to_move:
-		body_to_move.position.x += 100 * delta
+		body_to_move.position += Vector3(0,1,0) * delta

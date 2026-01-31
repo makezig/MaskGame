@@ -28,6 +28,10 @@ func _ready():
 func _process(delta):
 	move_npcs(delta)
 
+func force_exit_all():
+	for npc_data in npc_list:
+		command_npc_to_exit(npc_data)
+
 # Spawn NPC at spawn point
 func spawn_npc():
 	var npc_instance = npc_scene.instantiate()

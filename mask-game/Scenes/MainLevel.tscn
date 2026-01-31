@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://boxmardtlfbbt" path="res://Npc/boss.tscn" id="4_o15vh"]
 [ext_resource type="Script" uid="uid://b44cacrj5rgxy" path="res://Npc/BossMoving.gd" id="4_ymtjv"]
 [ext_resource type="Script" uid="uid://d0uup50kedtvn" path="res://Scenes/core_game_loop.gd" id="6_2a20n"]
+[ext_resource type="PackedScene" uid="uid://b7iacfodeotyg" path="res://Assets/Bottle/bottle_simple_modified.tscn" id="7_0e82a"]
 
 [sub_resource type="Sky" id="Sky_c77c4"]
 
@@ -110,7 +111,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6604614, 6.8377075, -7.757
 shape = SubResource("BoxShape3D_c77c4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/SideWall/BackWall2" unique_id=996483958]
-transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 1.6580405, 5.871557, 4.1808815)
+transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 3.6580405, 4.871557, 5.1808815)
 mesh = SubResource("BoxMesh_c77c4")
 
 [node name="SideWall2" type="StaticBody3D" parent="LevelGeometry" unique_id=409069966]
@@ -245,7 +246,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31005824, 3.4256096, -11.9
 [node name="Inactive" type="Node3D" parent="BossStuff" unique_id=83088426]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0903773, 3.5414133, -14.039294)
 
-[node name="CoreGameLoop" type="Node" parent="." unique_id=376331103]
+[node name="CoreGameLoop" type="Node" parent="." unique_id=376331103 node_paths=PackedStringArray("boss", "npc", "item_spawn_point")]
 script = ExtResource("6_2a20n")
+boss = NodePath("../BossStuff")
+npc = NodePath("../NPCSpawner")
+item_spawn_point = NodePath("../ItemSpawnPoint")
+
+[node name="BottleSimple" parent="." unique_id=536437476 instance=ExtResource("7_0e82a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.159188, 0.97892165, -3.2532842)
 
 [editable path="RegisterNode"]

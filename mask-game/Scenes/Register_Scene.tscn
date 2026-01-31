@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d1suiasio656j"]
+[gd_scene format=3 uid="uid://dsbyxsxnb7ci4"]
 
 [ext_resource type="PackedScene" uid="uid://delv4jwkbhml6" path="res://Assets/Register.fbx" id="1_opqah"]
 [ext_resource type="Script" uid="uid://dfragua3lg5co" path="res://Scenes/move_area.gd" id="2_hd7dw"]
