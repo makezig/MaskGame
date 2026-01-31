@@ -1,6 +1,24 @@
 [gd_scene format=3 uid="uid://blg57qo672w3u"]
 
 [ext_resource type="Script" uid="uid://beyhw7jty2oyg" path="res://UI/MainMenuScript.gd" id="1_uahxu"]
+[ext_resource type="FontFile" uid="uid://bouybuirdjx5e" path="res://Fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf" id="2_b37jj"]
+
+[sub_resource type="Theme" id="Theme_otjfi"]
+default_font = ExtResource("2_b37jj")
+default_font_size = 124
+
+[sub_resource type="Theme" id="Theme_8aown"]
+default_font = ExtResource("2_b37jj")
+default_font_size = 36
+
+[sub_resource type="Theme" id="Theme_b37jj"]
+default_font_size = 36
+
+[sub_resource type="Theme" id="Theme_t6syg"]
+default_font_size = 36
+
+[sub_resource type="Theme" id="Theme_y6s48"]
+default_font_size = 24
 
 [node name="MainMenu" type="Control" unique_id=2022857961]
 layout_mode = 3
@@ -27,16 +45,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="GameTitle" type="Label" parent="." unique_id=785032850]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 53.0
+offset_right = 730.0
+offset_bottom = 205.0
+theme = SubResource("Theme_otjfi")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Mask Game"
+
 [node name="Buttons" type="Control" parent="." unique_id=296897060]
 z_index = 1
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 100.0
-offset_top = -174.0
-offset_right = 300.0
-offset_bottom = 176.0
+offset_left = 73.0
+offset_top = -94.0
+offset_right = 273.0
+offset_bottom = 183.0
 grow_vertical = 2
 script = ExtResource("1_uahxu")
 
@@ -49,6 +77,7 @@ offset_left = -100.0
 offset_right = 100.0
 offset_bottom = 75.0
 grow_horizontal = 2
+theme = SubResource("Theme_8aown")
 text = "Start"
 
 [node name="CreditsButton" type="Button" parent="Buttons" unique_id=243894096]
@@ -61,6 +90,7 @@ offset_top = 100.0
 offset_right = 100.0
 offset_bottom = 175.0
 grow_horizontal = 2
+theme = SubResource("Theme_b37jj")
 text = "Credits
 "
 
@@ -74,6 +104,7 @@ offset_top = 200.0
 offset_right = 100.0
 offset_bottom = 275.0
 grow_horizontal = 2
+theme = SubResource("Theme_t6syg")
 text = "Quit"
 
 [node name="CreditsLabel" type="Label" parent="Buttons" unique_id=1648397886]
@@ -83,12 +114,13 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 46.0
-offset_top = -160.0
-offset_right = 496.0
-offset_bottom = 90.0
+offset_left = 30.0
+offset_top = -126.5
+offset_right = 480.0
+offset_bottom = 123.5
 grow_horizontal = 0
 grow_vertical = 2
+theme = SubResource("Theme_y6s48")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "William - UI
 Markus - 3D modeling
