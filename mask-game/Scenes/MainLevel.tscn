@@ -130,7 +130,7 @@ spawn = NodePath("Spawn")
 tiller = NodePath("Tiller")
 exit = NodePath("Exit")
 player_marker = NodePath("PlayersPos")
-tiller_wait_time = 5.0
+tiller_wait_time = 10.0
 
 [node name="PlayersPos" type="Node3D" parent="Node3D" unique_id=1668226425]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38341355, 0.42387414, -0.56813055)
