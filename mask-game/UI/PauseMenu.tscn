@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://ddo4hsk4dyrkt" path="res://UI/PauseMenuScript.gd" id="1_05bun"]
 
+[sub_resource type="Theme" id="Theme_05bun"]
+default_font_size = 42
+
+[sub_resource type="Theme" id="Theme_tsvmi"]
+default_font_size = 42
+
 [node name="PauseRoot" type="Control" unique_id=1432227310]
 process_mode = 3
 layout_mode = 3
@@ -35,6 +41,7 @@ offset_left = -100.0
 offset_right = 100.0
 offset_bottom = 75.0
 grow_horizontal = 2
+theme = SubResource("Theme_05bun")
 text = "Main Menu"
 
 [node name="ResumeButton" type="Button" parent="Control" unique_id=1330418706]
@@ -47,4 +54,5 @@ offset_top = 125.0
 offset_right = 100.0
 offset_bottom = 200.0
 grow_horizontal = 2
+theme = SubResource("Theme_tsvmi")
 text = "Resume"

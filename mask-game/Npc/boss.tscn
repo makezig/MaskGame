@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://boxmardtlfbbt"]
+
+[ext_resource type="PackedScene" uid="uid://stu4ogx6nj73" path="res://Npc/NPCMasks/mask_2.tscn" id="1_qcos5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_toype"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qcos5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcos5"]
+albedo_color = Color(5.912981, 5.535857, 0, 1)
+
+[node name="Boss" type="RigidBody3D" unique_id=1187777619]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=964336008]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.9931929, 0)
+shape = SubResource("CapsuleShape3D_toype")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=55573350]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.9931929, 0)
+mesh = SubResource("CapsuleMesh_qcos5")
+surface_material_override/0 = SubResource("StandardMaterial3D_qcos5")
+
+[node name="BlackMask" parent="." unique_id=819310686 instance=ExtResource("1_qcos5")]
+transform = Transform3D(-1.8140225e-08, 0, 0.415, 0, 0.415, 0, -0.415, 0, -1.8140225e-08, -0.00276649, 2.2289324, -1.0865864)

@@ -24,7 +24,8 @@ func  _input(event):
 	if event is InputEventMouseMotion:
 		v.y -= (event.relative.x * sensitivity)
 		v.x -= (event.relative.y * sensitivity)
-		v.x = clamp(v.x, -80, 90)
+		v.x = clamp(v.x, -80, 70)
+		v.y = clamp(v.y, -100, 75)
 
 
 func handle_object_interaction():

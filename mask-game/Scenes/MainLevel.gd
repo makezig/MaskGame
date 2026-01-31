@@ -7,7 +7,7 @@ extends Node3D
 
 # Preload item scenes
 var items: Array = [
-	preload("res://Assets/bottle_pieces_modified.tscn")
+	preload("res://Assets/Bottle/bottle_pieces_modified.tscn")
 ]
 
 

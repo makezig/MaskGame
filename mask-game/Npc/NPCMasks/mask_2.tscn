@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://stu4ogx6nj73"]
+
+[ext_resource type="PackedScene" uid="uid://ddc8nrqu8uow2" path="res://Npc/NPCMasks/Mask2.fbx" id="1_yyyxk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyyxk"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Mask2" unique_id=819310686 instance=ExtResource("1_yyyxk")]
+
+[node name="Mask_002" parent="." index="0" unique_id=681351041]
+surface_material_override/0 = SubResource("StandardMaterial3D_yyyxk")
