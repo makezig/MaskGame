@@ -47,7 +47,7 @@ func npc_item_spawn_loop(delta: float):
 	
 	if item_clock <= 0:
 		main_level.call_deferred("spawn_items")
-		item_clock = randf_range(1.0, 3.0)
+		item_clock = randf_range(1.5, 4.0)
 	pass
 
 

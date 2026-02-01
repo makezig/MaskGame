@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ceo6v3cox77eb"]
 
 [ext_resource type="Script" uid="uid://dul4fmsxhlvtn" path="res://Player/player.gd" id="1_3qydi"]
+[ext_resource type="PackedScene" uid="uid://yupoye3i6pwj" path="res://Assets/Arm/Arm.fbx" id="2_q3lat"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_q3lat"]
 
@@ -12,18 +13,22 @@ script = ExtResource("1_3qydi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1231978, 0)
 
 [node name="RayCast3DHand" type="RayCast3D" parent="Camera3D" unique_id=389570655]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7310117, -0.6110141, -0.53984725)
+transform = Transform3D(6.6985617, 0, 0, 0, 19.607685, 0, 0, 0, 0.4497822, 0.7310117, -0.53291714, -0.53984725)
 target_position = Vector3(0, 0, -4)
 collision_mask = 3
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=2088946914]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24485195, 0.015084982, -0.17480499)
+transform = Transform3D(17.190231, 0, 0, 0, 13.737989, 0, 0, 0, 1.0219622, -0.015639842, -0.078597546, -0.17480499)
 target_position = Vector3(0, 0, -4)
 collision_mask = 3
 
 [node name="Hand" type="Node3D" parent="." unique_id=120060338]
-transform = Transform3D(0.263, 0, 0, 0, 0.419, 0, 0, 0, 0.495, 0.73836833, -0.57907724, -1.0315384)
+transform = Transform3D(0.2629207, -0.010288257, 0, 0.006457785, 0.41887367, 0, 0, 0, 0.49499997, 0.73836833, -0.57907724, -1.0315384)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Hand" unique_id=2076345197]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.44940853)
 mesh = SubResource("BoxMesh_q3lat")
+
+[node name="Arm" parent="." unique_id=1768279622 instance=ExtResource("2_q3lat")]
+transform = Transform3D(0.026722299, 2.427103, 0.27577156, -0.09223884, 0.7660612, -0.5789912, -0.039521858, -0.14682692, 1.5377506, 0.9242282, -1.1803432, -0.4404397)

@@ -64,7 +64,7 @@ height = 0.2
 script = ExtResource("1_8vsrk")
 items = Array[PackedScene]([ExtResource("4_o8t5j"), ExtResource("7_0e82a"), ExtResource("3_7g1pw"), ExtResource("5_4s6sc")])
 min_items = 1
-max_items = 3
+max_items = 2
 item_spawn_radius = 0.2
 item_spawn_point = NodePath("ItemSpawnPoint")
 
