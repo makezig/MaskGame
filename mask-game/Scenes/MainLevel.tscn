@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1suiasio656j" path="res://Scenes/Register_Scene.tscn" id="3_o15vh"]
 [ext_resource type="PackedScene" uid="uid://5siooecfnevj" path="res://Assets/Bottle/beer_basket_modified.tscn" id="4_o8t5j"]
 [ext_resource type="PackedScene" uid="uid://boxmardtlfbbt" path="res://Npc/boss.tscn" id="4_o15vh"]
-[ext_resource type="Material" path="res://new_standard_material_3d.tres" id="4_s1b4b"]
+[ext_resource type="Material" uid="uid://m4237bl42f30" path="res://new_standard_material_3d.tres" id="4_s1b4b"]
 [ext_resource type="Material" uid="uid://1qpr78ga3wun" path="res://Dark_standard_material_3d.tres" id="4_snxwr"]
 [ext_resource type="Script" uid="uid://b44cacrj5rgxy" path="res://Npc/BossMoving.gd" id="4_ymtjv"]
 [ext_resource type="PackedScene" uid="uid://bjlrcf6fawaan" path="res://Assets/es_modified.tscn" id="5_4s6sc"]
@@ -74,8 +74,8 @@ size = Vector3(33.07006, 42.19986, 1)
 script = ExtResource("1_8vsrk")
 items = Array[PackedScene]([ExtResource("4_o8t5j"), ExtResource("7_0e82a"), ExtResource("3_7g1pw"), ExtResource("5_4s6sc")])
 min_items = 1
-max_items = 2
-item_spawn_radius = 0.2
+max_items = 1
+item_spawn_radius = 0.15
 item_spawn_point = NodePath("ItemSpawnPoint")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1405096946]

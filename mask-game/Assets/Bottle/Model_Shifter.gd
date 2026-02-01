@@ -1,5 +1,8 @@
 extends Node3D
 
+# Signal emitted when this object is destroyed
+signal destroyed(obj: Node3D)
+
 @export var broken_model:PackedScene;
 @export var simple_model:Node3D;
 
@@ -21,5 +24,7 @@ func _on_area_3d_area_entered(Break: Area3D) -> void:
 		print("Broken:", broken_model_inst.global_position)
 		
 		print("Bottle parent:", get_parent().name)
-		
+			# Emit signal BEFORE freeing self
+		emit_signal("destroyed", self)
+	
 		self.queue_free(); #Destroy model

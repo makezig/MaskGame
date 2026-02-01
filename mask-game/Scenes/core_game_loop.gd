@@ -24,8 +24,14 @@ var boss_clock: float = 5.0
 var npc_clock: float = 5
 var item_clock: float = 2
 
+
+# Keep track of already connected pickables
+var connected_pickables: Array = []
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+
 	pass # Replace with function body.
 
 
@@ -35,6 +41,31 @@ func _process(delta: float) -> void:
 	boss_timer(delta)
 	mood_degradation(delta)
 	game_over(delta)
+	_check_new_pickables()
+
+
+func _check_new_pickables():
+	var pickables = get_tree().get_nodes_in_group("pickable")
+	for obj in pickables:
+		if obj in connected_pickables:
+			continue
+		if obj.has_signal("destroyed"):
+			print("Connecting to pickable:", obj.name)
+			obj.destroyed.connect(_on_pickable_destroyed)
+			connected_pickables.append(obj)
+
+			
+func _on_pickable_destroyed(obj: Node3D) -> void:
+	print("Pickable destroyed:", obj.name)
+	if boss.moving_to_active:  # Boss is active → fail
+		fail_count += 1
+		print("Fail triggered! Current fail count:", fail_count)
+	else:  # Boss inactive → increase mood
+		mood += 10
+		mood = clamp(mood, 0, 100)
+		print("Mood increased! Current mood:", mood)
+	# Remove from connected list
+	connected_pickables.erase(obj)
 
 func npc_item_spawn_loop(delta: float):
 	npc_clock -= delta

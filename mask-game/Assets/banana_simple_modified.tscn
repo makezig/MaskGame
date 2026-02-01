@@ -79,7 +79,7 @@ points = PackedVector3Array(0.057322476, -0.035873264, 0.024622649, 0.056020897,
 [sub_resource type="SphereShape3D" id="SphereShape3D_ljxa6"]
 radius = 0.09562173
 
-[node name="BananaSimple" type="Node3D" unique_id=317134046 node_paths=PackedStringArray("simple_model")]
+[node name="BananaSimple" type="Node3D" unique_id=317134046 node_paths=PackedStringArray("simple_model") groups=["pickable"]]
 script = ExtResource("1_ljxa6")
 broken_model = ExtResource("2_bxtke")
 simple_model = NodePath("RigidBody3D/BananaBunch")

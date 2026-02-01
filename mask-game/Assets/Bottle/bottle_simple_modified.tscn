@@ -79,7 +79,7 @@ points = PackedVector3Array(-0.040424746, 0.012915617, -7.942319e-06, -0.0373541
 [sub_resource type="SphereShape3D" id="SphereShape3D_dunvp"]
 radius = 0.07654201
 
-[node name="BottleSimple" type="Node3D" unique_id=536437476 node_paths=PackedStringArray("simple_model")]
+[node name="BottleSimple" type="Node3D" unique_id=536437476 node_paths=PackedStringArray("simple_model") groups=["pickable"]]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 0, 0, 0)
 script = ExtResource("2_tuitb")
 broken_model = ExtResource("2_dunvp")

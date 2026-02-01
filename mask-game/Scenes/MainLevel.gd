@@ -101,4 +101,4 @@ func spawn_items():
 		add_child(item_instance)
 		
 		item_instance.global_position = item_spawn_point.global_position + random_offset
-		item_instance.scale *= 1.5
+		item_instance.scale *= 1
