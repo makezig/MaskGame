@@ -57,6 +57,10 @@ height = 0.2
 
 [node name="SceneRoot" type="Node3D" unique_id=612120488 node_paths=PackedStringArray("item_spawn_point")]
 script = ExtResource("1_8vsrk")
+items = Array[PackedScene]([ExtResource("7_0e82a")])
+min_items = 1
+max_items = 3
+item_spawn_radius = 0.2
 item_spawn_point = NodePath("ItemSpawnPoint")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1405096946]
@@ -68,7 +72,7 @@ compositor = SubResource("Compositor_c77c4")
 transform = Transform3D(0.97373015, 0.16639468, -0.15544268, 0, 0.6826491, 0.7307463, 0.22770512, -0.71154976, 0.664716, 0, 8.7637825, 0)
 
 [node name="ItemSpawnPoint" type="Node3D" parent="." unique_id=1640993493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5743394, 0.9454948, -1.9212838)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4460819, 0.98112774, -1.9046535)
 
 [node name="RegisterNode" parent="." unique_id=152637685 instance=ExtResource("3_o15vh")]
 transform = Transform3D(-3.5, 0, -3.059797e-07, 0, 3.5, 0, 3.059797e-07, 0, -3.5, -0.08876872, 0, -1.9674461)
@@ -271,7 +275,7 @@ main_level = NodePath("..")
 npc_spawner = NodePath("../NPCSpawner")
 
 [node name="Node3D" type="RigidBody3D" parent="." unique_id=1836306242 groups=["pickable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8279123, 1.2267189, -4.1503124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5774958, 1.2267189, 3.764803)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D" unique_id=996976234]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009033203, 0.00033569336, -0.009277344)
@@ -281,7 +285,7 @@ shape = SubResource("BoxShape3D_0e82a")
 mesh = SubResource("BoxMesh_s1b4b")
 
 [node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=367272320 groups=["pickable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2962692, 1.1823792, -4.3125086)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2560072, 1.1823792, 3.2175379)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=1861536626]
 shape = SubResource("SphereShape3D_0e82a")

@@ -5,10 +5,7 @@ extends Node3D
 @onready var player_character := preload("res://Player/Player.tscn")
 
 
-# Preload item scenes
-var items: Array = [
-	preload("res://Assets/Bottle/bottle_simple_modified.tscn")
-]
+@export var items: Array[PackedScene]
 
 
 #Scene refrences needed for gameloop
@@ -78,22 +75,27 @@ func spawn_items():
 		push_warning("Item spawn point not assigned!")
 		return
 
-	# Decide how many items to spawn this call
-	var num_items = randi() % (max_items - min_items + 1) + min_items
+	if items.is_empty():
+		push_warning("No items assigned to spawn!")
+		return
 
-	for i in num_items:
-		# Pick a random item from the array
-		var random_index = randi() % items.size()
-		var item_scene = items[random_index]
-		var item_instance = item_scene.instantiate() as Node3D
+	# Decide how many items to spawn
+	var num_items := randi_range(min_items, max_items)
 
-		# Pick a random position around the spawn point within a radius
-		var random_offset = Vector3(
+	for i in range(num_items):
+		# Pick a random item scene
+		var item_scene: PackedScene = items.pick_random()
+		var item_instance := item_scene.instantiate() as Node3D
+
+		# Random position around spawn point
+		var random_offset := Vector3(
 			randf_range(-item_spawn_radius, item_spawn_radius),
-			0,  # Keep Y the same (adjust if you want vertical variation)
+			0.0,
 			randf_range(-item_spawn_radius, item_spawn_radius)
 		)
-		item_instance.global_transform.origin = item_spawn_point.global_transform.origin + random_offset
+
+		item_instance.global_position = item_spawn_point.global_position + random_offset
+		item_instance.scale *= 1.5
 
 		# Add to scene
 		add_child(item_instance)

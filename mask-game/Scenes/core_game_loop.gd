@@ -47,8 +47,10 @@ func npc_item_spawn_loop(delta: float):
 	
 	if item_clock <= 0:
 		#TODO: Add item spawn logic
+		main_level.spawn_items()
 		item_clock = randf_range(1.0, 3.0)
 	pass
+
 
 func boss_timer(delta: float):
 	boss_clock -= delta

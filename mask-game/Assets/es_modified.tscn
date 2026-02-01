@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://bjlrcf6fawaan"]
+[gd_scene format=3 uid="uid://dy01nfm6c7g03"]
 
 [ext_resource type="PackedScene" uid="uid://bxitaikbvev2m" path="res://Assets/ES.fbx" id="1_xwvhf"]
-[ext_resource type="Script" uid="uid://m1wobsb18jyu" path="res://Apply_Texture.gd" id="2_dj4r6"]
+[ext_resource type="Script" path="res://Apply_Texture.gd" id="2_dj4r6"]
 [ext_resource type="Texture2D" uid="uid://cdm54yumflo8h" path="res://UI/MaskIMGs/MadUIMask.png" id="3_dj4r6"]
 [ext_resource type="Texture2D" uid="uid://bh3q6gwfnpqs" path="res://Assets/Textures/ES_Diff.jpg" id="4_uo83q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5g5h"]
 albedo_texture = ExtResource("4_uo83q")
 
-[node name="ES" unique_id=530522114 instance=ExtResource("1_xwvhf")]
+[node name="ES" unique_id=530522114 groups=["pickable"] instance=ExtResource("1_xwvhf")]
 script = ExtResource("2_dj4r6")
 tex = ExtResource("3_dj4r6")
 
-[node name="ES" parent="." index="0" unique_id=1372325226]
+[node name="ES" parent="." index="0" unique_id=671500187]
 surface_material_override/0 = SubResource("StandardMaterial3D_j5g5h")
