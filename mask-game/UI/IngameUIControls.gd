@@ -7,6 +7,11 @@ enum UIState {
 	SAD
 }
 
+var current_color: Color
+var target_color: Color
+var color_lerp_speed := 5.0
+
+
 @export var current_state: UIState = UIState.HAPPY
 @export var default_color: Color = Color.WEB_GREEN
 @export var fail_count_text: String = "Testing"
@@ -27,14 +32,18 @@ func _ready():
 	set_color_image_color(default_color)
 	set_failcounter(9)
 
+func _process(delta):
+	current_color = current_color.lerp(target_color, delta * color_lerp_speed)
+	set_color_image_color(current_color)
+
+
 func set_failcounter(count: int):
 	fail_label.text = fail_count_text + str(count)
 
 #Call if you want to update both face and color
 func uppdate_rage_mask(state: UIState, color: Color):
 	set_state(state)
-	set_color_image_color(color)
-
+	target_color = color
 
 func set_state(value: UIState):
 	current_state = value
