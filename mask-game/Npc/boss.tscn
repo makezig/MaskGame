@@ -7,7 +7,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qcos5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcos5"]
-albedo_color = Color(5.912981, 5.535857, 0, 1)
+albedo_color = Color(2.2234871, 2.0795069, 0, 1)
 
 [node name="Boss" type="RigidBody3D" unique_id=1187777619]
 
