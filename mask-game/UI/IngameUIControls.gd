@@ -24,6 +24,9 @@ var color_lerp_speed := 5.0
 ]
 
 @onready var fail_label = $FailCounter
+@onready var clock = $Clock
+# Variable to track elapsed time in seconds
+var elapsed_time: float = 0.0
 
 @onready var color_image: TextureRect = $Color
 
@@ -35,7 +38,16 @@ func _ready():
 func _process(delta):
 	current_color = current_color.lerp(target_color, delta * color_lerp_speed)
 	set_color_image_color(current_color)
-
+	
+		# Increment elapsed time by delta
+	elapsed_time += delta
+	
+	# Convert elapsed_time to hours, minutes, seconds
+	var minutes = int(fmod(elapsed_time, 3600) / 60)
+	var seconds = int(fmod(elapsed_time, 60))
+	
+	# Format as HH:MM:SS
+	clock.text = "%02d:%02d" % [minutes, seconds]
 
 func set_failcounter(count: int):
 	var fails = 3-count

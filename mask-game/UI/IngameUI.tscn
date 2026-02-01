@@ -95,6 +95,20 @@ texture = ExtResource("3_telbt")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="Clock" type="Label" parent="." unique_id=665484006]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.0
+offset_top = 26.0
+offset_right = 102.0
+offset_bottom = 106.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_oky2f")
+theme_override_font_sizes/font_size = 52
+text = "Test Text"
+
 [node name="FailCounter" type="Label" parent="." unique_id=648565925]
 layout_mode = 1
 offset_left = 26.0
