@@ -12,7 +12,7 @@ script = ExtResource("1_3qydi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1231978, 0)
 
 [node name="RayCast3DHand" type="RayCast3D" parent="Camera3D" unique_id=389570655]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7310117, -0.514241, -0.53984725)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7310117, -0.6110141, -0.53984725)
 target_position = Vector3(0, 0, -4)
 collision_mask = 3
 

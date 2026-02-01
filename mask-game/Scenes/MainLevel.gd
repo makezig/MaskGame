@@ -93,7 +93,10 @@ func spawn_items():
 			0.0,
 			randf_range(-item_spawn_radius, item_spawn_radius)
 		)
-
+		
+		if item_instance == null:
+			return
+		
 		item_instance.global_position = item_spawn_point.global_position + random_offset
 		item_instance.scale *= 1.5
 

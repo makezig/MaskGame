@@ -44,7 +44,6 @@ func handle_object_interaction():
 					place_object(object2)
 				# throw object if not
 				else: throw_object(object2)
-		
 	if raycast.is_colliding():
 		if object.is_in_group("pickable"):
 			# hold object in hand when left mouse down
