@@ -15,11 +15,6 @@
 albedo_color = Color(0.9388407, 0, 0.2378011, 1)
 
 [node name="NPC" type="RigidBody3D" unique_id=285974461 node_paths=PackedStringArray("Mask1", "Mask2", "Mask3", "Mask4", "Mask5")]
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_z = true
 script = ExtResource("1_3gw2r")
 Mask1 = NodePath("Mask1")
 Mask2 = NodePath("Mask2")
