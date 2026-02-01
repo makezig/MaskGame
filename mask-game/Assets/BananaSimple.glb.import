@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b03deci2dke4w"
-path="res://.godot/imported/BananaBunch.fbx-d28fd5bbcbf54323bcbb0887b32176de.scn"
+uid="uid://b461t2f0382wr"
+path="res://.godot/imported/BananaSimple.glb-7492e927973e68adec3ca5a3d9788751.scn"
 
 [deps]
 
-source_file="res://Assets/BananaBunch.fbx"
-dest_files=["res://.godot/imported/BananaBunch.fbx-d28fd5bbcbf54323bcbb0887b32176de.scn"]
+source_file="res://Assets/BananaSimple.glb"
+dest_files=["res://.godot/imported/BananaSimple.glb-7492e927973e68adec3ca5a3d9788751.scn"]
 
 [params]
 
@@ -30,7 +30,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -38,7 +38,5 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
