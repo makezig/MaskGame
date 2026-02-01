@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bt4k48uxepvci" path="res://Npc/NpcPathController.gd" id="3_c77c4"]
 [ext_resource type="PackedScene" uid="uid://d1suiasio656j" path="res://Scenes/Register_Scene.tscn" id="3_o15vh"]
 [ext_resource type="PackedScene" uid="uid://boxmardtlfbbt" path="res://Npc/boss.tscn" id="4_o15vh"]
+[ext_resource type="Material" uid="uid://m4237bl42f30" path="res://new_standard_material_3d.tres" id="4_s1b4b"]
+[ext_resource type="Material" uid="uid://1qpr78ga3wun" path="res://Dark_standard_material_3d.tres" id="4_snxwr"]
 [ext_resource type="Script" uid="uid://b44cacrj5rgxy" path="res://Npc/BossMoving.gd" id="4_ymtjv"]
 [ext_resource type="Script" uid="uid://d0uup50kedtvn" path="res://Scenes/core_game_loop.gd" id="6_2a20n"]
 [ext_resource type="PackedScene" uid="uid://b7iacfodeotyg" path="res://Assets/Bottle/bottle_simple_modified.tscn" id="7_0e82a"]
@@ -57,6 +59,10 @@ height = 0.2
 
 [node name="SceneRoot" type="Node3D" unique_id=612120488 node_paths=PackedStringArray("item_spawn_point")]
 script = ExtResource("1_8vsrk")
+items = Array[PackedScene]([ExtResource("7_0e82a")])
+min_items = 1
+max_items = 3
+item_spawn_radius = 0.2
 item_spawn_point = NodePath("ItemSpawnPoint")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1405096946]
@@ -68,7 +74,7 @@ compositor = SubResource("Compositor_c77c4")
 transform = Transform3D(0.97373015, 0.16639468, -0.15544268, 0, 0.6826491, 0.7307463, 0.22770512, -0.71154976, 0.664716, 0, 8.7637825, 0)
 
 [node name="ItemSpawnPoint" type="Node3D" parent="." unique_id=1640993493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5743394, 0.9454948, -1.9212838)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4460819, 0.98112774, -1.9046535)
 
 [node name="RegisterNode" parent="." unique_id=152637685 instance=ExtResource("3_o15vh")]
 transform = Transform3D(-3.5, 0, -3.059797e-07, 0, 3.5, 0, 3.059797e-07, 0, -3.5, -0.08876872, 0, -1.9674461)
@@ -86,8 +92,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39212036, -0.70532227, -10.
 shape = SubResource("BoxShape3D_o15vh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/Floor" unique_id=2007910246]
-transform = Transform3D(23.835112, 0, 0, 0, 1, 0, 0, 0, 17.95112, -0.018713474, 0, -10.616034)
+transform = Transform3D(23.835112, 0, 0, 0, 1, 0, 0, 0, 17.95112, -0.018713474, 0, -10.375015)
 mesh = SubResource("PlaneMesh_o15vh")
+surface_material_override/0 = ExtResource("4_snxwr")
 
 [node name="Celling" type="StaticBody3D" parent="LevelGeometry" unique_id=343143157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.568054, 0)
@@ -100,9 +107,45 @@ shape = SubResource("BoxShape3D_o15vh")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/Celling" unique_id=1352579652]
 transform = Transform3D(23.835112, 0, 0, 0, -1, 1.5693367e-06, 0, -8.742278e-08, -17.95112, -0.018713474, 0, -10.616034)
 mesh = SubResource("PlaneMesh_o15vh")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=792304364]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6511425, -3.7301664, -3.8680842)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1440988, -3.7301664, -3.8680842)
+omni_range = 59.284
+omni_attenuation = 0.387
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=610277696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.08616, -3.7301664, -3.8680842)
+omni_range = 59.284
+omni_attenuation = 0.387
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=1310291562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4695454, -3.7301664, -3.8680842)
+omni_range = 59.284
+omni_attenuation = 0.387
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=146969419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.65527, -3.7301664, -3.8680842)
+omni_range = 59.284
+omni_attenuation = 0.387
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=847612377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.317776, -3.7301664, -3.8680842)
+omni_range = 59.284
+omni_attenuation = 0.387
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=1444987197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.912483, -3.7301664, -3.8680842)
+omni_range = 59.284
+omni_attenuation = 0.387
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=494697816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.828947, -3.7301664, -3.8680842)
+omni_range = 59.284
+omni_attenuation = 0.387
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="LevelGeometry/Celling" unique_id=451470654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.828947, -3.7301664, -9.232909)
 omni_range = 59.284
 omni_attenuation = 0.387
 
@@ -117,6 +160,7 @@ shape = SubResource("BoxShape3D_c77c4")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/SideWall" unique_id=416656451]
 transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 1.6580405, 5.871557, -7.5355616)
 mesh = SubResource("BoxMesh_c77c4")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="BackWall2" type="StaticBody3D" parent="LevelGeometry/SideWall" unique_id=1604743911]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25.391949, 0, -32.753723)
@@ -127,8 +171,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6604614, 6.8377075, 5.2333
 shape = SubResource("BoxShape3D_c77c4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/SideWall/BackWall2" unique_id=996483958]
-transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 3.6580405, 4.871557, 5.1808815)
+transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 3.6580405, 6.575466, 5.1808815)
 mesh = SubResource("BoxMesh_c77c4")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="SideWall2" type="StaticBody3D" parent="LevelGeometry" unique_id=409069966]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28.916042, -0.051570892, -21.043509)
@@ -141,6 +186,7 @@ shape = SubResource("BoxShape3D_c77c4")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/SideWall2" unique_id=225910712]
 transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 0.24494553, 5.871557, -7.5355606)
 mesh = SubResource("BoxMesh_c77c4")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="BackWall" type="StaticBody3D" parent="LevelGeometry" unique_id=1633618847]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.718487)
@@ -153,6 +199,7 @@ shape = SubResource("BoxShape3D_c77c4")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/BackWall" unique_id=251650280]
 transform = Transform3D(56.86015, 0, 0, 0, 17.382858, 0, 0, 0, 3.5301569, 1.6580405, 5.871557, -7.5355616)
 mesh = SubResource("BoxMesh_c77c4")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LevelGeometry" unique_id=571948987]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8617306, 0)
@@ -160,6 +207,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8617306, 0)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/StaticBody3D" unique_id=1328348188]
 transform = Transform3D(33.736233, 0, 0, 0, 4.6739855, 0, 0, 0, 20.131586, 3.14963, 1.6659737, -20.454557)
 mesh = SubResource("BoxMesh_o15vh")
+surface_material_override/0 = ExtResource("4_snxwr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/StaticBody3D" unique_id=1295285274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.911399, 1.797348, -21.025732)
@@ -171,6 +219,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.56734, -6.396445)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/StaticBody3D2" unique_id=2109266548]
 transform = Transform3D(33.736233, 0, 0, 0, 4.6739855, 0, 0, 0, 20.131586, 3.14963, 1.6659737, -20.454557)
 mesh = SubResource("BoxMesh_o15vh")
+surface_material_override/0 = ExtResource("4_snxwr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/StaticBody3D2" unique_id=2134076082]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.911399, 1.797348, -21.025732)
@@ -182,6 +231,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.151211, -6.396445)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/StaticBody3D3" unique_id=1001604490]
 transform = Transform3D(33.736233, 0, 0, 0, 4.6739855, 0, 0, 0, 20.131586, 3.14963, 1.502017, -20.454557)
 mesh = SubResource("BoxMesh_o15vh")
+surface_material_override/0 = ExtResource("4_snxwr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/StaticBody3D3" unique_id=1773186755]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.911399, 1.797348, -21.025732)
@@ -193,6 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.568934, -6.396445)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/StaticBody3D4" unique_id=1313493575]
 transform = Transform3D(33.736233, 0, 0, 0, 4.6739855, 0, 0, 0, 20.131586, 3.14963, 1.6659737, -20.454557)
 mesh = SubResource("BoxMesh_o15vh")
+surface_material_override/0 = ExtResource("4_snxwr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/StaticBody3D4" unique_id=531918737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.911399, 1.797348, -21.025732)
@@ -202,7 +253,9 @@ shape = SubResource("BoxShape3D_ymtjv")
 transform = Transform3D(28.961643, 0, 0, 0, 0.73670334, 0, 0, 0, 0.2656824, 11.256859, 3.3081121, -10.6324835)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/StaticBody3D5" unique_id=1103683229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.068321526, 0, 0)
 mesh = SubResource("BoxMesh_ymtjv")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/StaticBody3D5" unique_id=1811209348]
 shape = SubResource("BoxShape3D_2a20n")
@@ -211,7 +264,9 @@ shape = SubResource("BoxShape3D_2a20n")
 transform = Transform3D(10.756506, 0, 0, 0, 12.450082, 0, 0, 0, 0.2656824, -8.315758, 9.193056, -10.6324835)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/StaticBody3D6" unique_id=763971761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0.0036368594, 0.0017151833, 0.36501312)
 mesh = SubResource("BoxMesh_ymtjv")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/StaticBody3D6" unique_id=300396870]
 shape = SubResource("BoxShape3D_2a20n")
@@ -221,6 +276,7 @@ transform = Transform3D(-4.7018182e-07, 0, -0.2656824, 0, 12.450082, 0, 10.75650
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="LevelGeometry/StaticBody3D7" unique_id=2064611816]
 mesh = SubResource("BoxMesh_ymtjv")
+surface_material_override/0 = ExtResource("4_s1b4b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LevelGeometry/StaticBody3D7" unique_id=733320780]
 shape = SubResource("BoxShape3D_2a20n")
@@ -231,7 +287,7 @@ spawn = NodePath("Spawn")
 tiller = NodePath("Tiller")
 exit = NodePath("Exit")
 player_marker = NodePath("PlayersPos")
-tiller_wait_time = 10.0
+tiller_wait_time = 4.0
 
 [node name="PlayersPos" type="Node3D" parent="NPCSpawner" unique_id=1668226425]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38341355, 0.42387414, -0.56813055)
@@ -262,16 +318,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31005824, 3.4256096, -11.9
 [node name="Inactive" type="Node3D" parent="BossStuff" unique_id=83088426]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0903773, 3.5414133, -14.039294)
 
-[node name="CoreGameLoop" type="Node" parent="." unique_id=376331103 node_paths=PackedStringArray("boss", "npc", "item_spawn_point", "main_level")]
+[node name="CoreGameLoop" type="Node" parent="." unique_id=376331103 node_paths=PackedStringArray("boss", "npc", "item_spawn_point", "main_level", "npc_spawner")]
 script = ExtResource("6_2a20n")
 boss = NodePath("../BossStuff")
 npc = NodePath("../NPCSpawner")
 item_spawn_point = NodePath("../ItemSpawnPoint")
 main_level = NodePath("..")
-fail_count = 3
+npc_spawner = NodePath("../NPCSpawner")
 
 [node name="Node3D" type="RigidBody3D" parent="." unique_id=1836306242 groups=["pickable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8279123, 1.2267189, -4.1503124)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5774958, 1.2267189, 3.764803)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D" unique_id=996976234]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009033203, 0.00033569336, -0.009277344)
@@ -281,7 +337,7 @@ shape = SubResource("BoxShape3D_0e82a")
 mesh = SubResource("BoxMesh_s1b4b")
 
 [node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=367272320 groups=["pickable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2962692, 1.1823792, -4.3125086)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2560072, 1.1823792, 3.2175379)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=1861536626]
 shape = SubResource("SphereShape3D_0e82a")

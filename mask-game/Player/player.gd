@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var cam = $"."
 @onready var raycast = $Camera3D/RayCast3D
+@onready var raycast2 = $Camera3D/RayCast3DHand
 @onready var hand = $Hand
 
 var v = Vector3()
@@ -30,6 +31,20 @@ func  _input(event):
 
 func handle_object_interaction():
 	var object = raycast.get_collider()
+	var object2 = raycast2.get_collider()
+	if raycast2.is_colliding():
+		if object2.is_in_group("pickable"):
+			# hold object in hand when left mouse down
+			if Input.is_action_pressed("Interact"):
+				hold_object(object2)
+			# when left mouse released
+			if Input.is_action_just_released("Interact"):
+				# place object "nicely" when 'E' pressed
+				if Input.is_action_pressed("Place"):
+					place_object(object2)
+				# throw object if not
+				else: throw_object(object2)
+		
 	if raycast.is_colliding():
 		if object.is_in_group("pickable"):
 			# hold object in hand when left mouse down

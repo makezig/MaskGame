@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://1qpr78ga3wun"]
+
+[ext_resource type="Texture2D" uid="uid://ddf2ashhjqkxv" path="res://Assets/Materials/Dark/Dark_Metallic.png" id="2_kc0ak"]
+[ext_resource type="Texture2D" uid="uid://ce88gqptnkl1k" path="res://Assets/Materials/Dark/Dark_Normal.png" id="3_tkif5"]
+[ext_resource type="Texture2D" uid="uid://6ujtbn8a65c0" path="res://Assets/Materials/Dark/Wall_Normal.png" id="4_xbmyc"]
+
+[resource]
+albedo_color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+metallic = 1.0
+metallic_texture = ExtResource("2_kc0ak")
+roughness_texture = ExtResource("4_xbmyc")
+normal_enabled = true
+normal_texture = ExtResource("3_tkif5")
