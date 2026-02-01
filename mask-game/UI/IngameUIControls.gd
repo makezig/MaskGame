@@ -30,7 +30,7 @@ var color_lerp_speed := 5.0
 func _ready():
 	update_state_visuals()
 	set_color_image_color(default_color)
-	set_failcounter(9)
+	set_failcounter(0)
 
 func _process(delta):
 	current_color = current_color.lerp(target_color, delta * color_lerp_speed)
@@ -38,7 +38,8 @@ func _process(delta):
 
 
 func set_failcounter(count: int):
-	fail_label.text = fail_count_text + str(count)
+	var fails = 3-count
+	fail_label.text = fail_count_text + str(fails)
 
 #Call if you want to update both face and color
 func uppdate_rage_mask(state: UIState, color: Color):

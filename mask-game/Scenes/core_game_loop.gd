@@ -11,6 +11,7 @@ enum UIState {
 @export var npc: Node3D
 @export var item_spawn_point: Node3D
 @export var main_level: Node3D
+@export var npc_spawner: Node3D
 
 #Current fails and max fail count
 @export var fail_count: int = 0
@@ -19,6 +20,9 @@ var max_fails: int = 3
 var mood: float = 100
 #Timer untill boss changes state
 var boss_clock: float = 5.0
+#Npc spawn timer
+var npc_clock: float = 5
+var item_clock: float = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,8 +34,20 @@ func _process(delta: float) -> void:
 	npc_item_spawn_loop(delta)
 	boss_timer(delta)
 	mood_degradation(delta)
+	game_over(delta)
 
 func npc_item_spawn_loop(delta: float):
+	npc_clock -= delta
+	item_clock -= delta
+	
+	if npc_clock <= 0: # Spawning npc at even intervals
+		#npc_spawner.force_exit_all()
+		npc_spawner.spawn_npc()
+		npc_clock = randf_range(5.0, 8.0)
+	
+	if item_clock <= 0:
+		#TODO: Add item spawn logic
+		item_clock = randf_range(1.0, 3.0)
 	pass
 
 func boss_timer(delta: float):
