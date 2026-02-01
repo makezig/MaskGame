@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cabw1ncol2r73"]
 
 [ext_resource type="Script" uid="uid://c060oeicmy1ck" path="res://UI/game_over_menu.gd" id="1_0u5yh"]
+[ext_resource type="Texture2D" uid="uid://cuykp3u46yi2r" path="res://Assets/Fired.png" id="2_76f00"]
 
 [sub_resource type="Theme" id="Theme_76f00"]
 default_font_size = 42
@@ -31,6 +32,11 @@ offset_right = 144.0
 offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=1522750113]
+position = Vector2(167.99992, 125.49998)
+scale = Vector2(0.578125, 0.5805555)
+texture = ExtResource("2_76f00")
 
 [node name="MainMenuButton" type="Button" parent="Control" unique_id=688992645]
 layout_mode = 1
