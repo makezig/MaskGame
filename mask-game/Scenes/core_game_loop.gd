@@ -93,7 +93,7 @@ func boss_timer(delta: float):
 		boss.toggle_active_inactive()
 		#reset timer
 		boss_clock = 5
-		
+		fail_count -= 1
 	pass
 
 func mood_degradation(delta: float):
