@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://beyhw7jty2oyg" path="res://UI/MainMenuScript.gd" id="1_uahxu"]
 [ext_resource type="FontFile" uid="uid://bouybuirdjx5e" path="res://Fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf" id="2_b37jj"]
+[ext_resource type="Script" uid="uid://bxmfvss62i54" path="res://UI/texture_rect_3.gd" id="4_t6syg"]
+[ext_resource type="Texture2D" uid="uid://bptivep6a756s" path="res://Assets/RandomS.png" id="4_y6s48"]
 
 [sub_resource type="Theme" id="Theme_otjfi"]
 default_font = ExtResource("2_b37jj")
@@ -28,14 +30,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BGColor" type="ColorRect" parent="." unique_id=1099161475]
-z_index = -1
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1345857247]
+z_index = -2
+texture_repeat = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("4_y6s48")
+expand_mode = 1
+script = ExtResource("4_t6syg")
+color_cycle_speed = 10.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1809764971]
 layout_mode = 1
@@ -46,14 +53,27 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GameTitle" type="Label" parent="." unique_id=785032850]
+z_index = 1
 layout_mode = 0
 offset_left = 76.0
 offset_top = 53.0
 offset_right = 730.0
 offset_bottom = 205.0
 theme = SubResource("Theme_otjfi")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Mask Game"
+
+[node name="BGColor" type="ColorRect" parent="GameTitle" unique_id=1099161475]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -11.0
+offset_right = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5058824)
 
 [node name="Buttons" type="Control" parent="." unique_id=296897060]
 z_index = 1
@@ -122,7 +142,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = SubResource("Theme_y6s48")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "William - UI, Design and Programming
+text = "William - Design and Programming
 Markus - 3D modeling and Programming
 Juuso - 3D modeling
 Jessica - Programming
