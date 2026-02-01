@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://bx4gdl8xphuli"]
 
 [ext_resource type="Script" uid="uid://tf7a2weog7fv" path="res://Scenes/MainLevel.gd" id="1_8vsrk"]
+[ext_resource type="PackedScene" uid="uid://bxvs3nycjkh1k" path="res://Assets/banana_simple_modified.tscn" id="3_7g1pw"]
 [ext_resource type="Script" uid="uid://bt4k48uxepvci" path="res://Npc/NpcPathController.gd" id="3_c77c4"]
 [ext_resource type="PackedScene" uid="uid://d1suiasio656j" path="res://Scenes/Register_Scene.tscn" id="3_o15vh"]
+[ext_resource type="PackedScene" uid="uid://5siooecfnevj" path="res://Assets/Bottle/beer_basket_modified.tscn" id="4_o8t5j"]
 [ext_resource type="PackedScene" uid="uid://boxmardtlfbbt" path="res://Npc/boss.tscn" id="4_o15vh"]
 [ext_resource type="Material" uid="uid://m4237bl42f30" path="res://new_standard_material_3d.tres" id="4_s1b4b"]
 [ext_resource type="Material" uid="uid://1qpr78ga3wun" path="res://Dark_standard_material_3d.tres" id="4_snxwr"]
 [ext_resource type="Script" uid="uid://b44cacrj5rgxy" path="res://Npc/BossMoving.gd" id="4_ymtjv"]
+[ext_resource type="PackedScene" uid="uid://dy01nfm6c7g03" path="res://Assets/es_modified.tscn" id="5_4s6sc"]
 [ext_resource type="Script" uid="uid://d0uup50kedtvn" path="res://Scenes/core_game_loop.gd" id="6_2a20n"]
 [ext_resource type="PackedScene" uid="uid://b7iacfodeotyg" path="res://Assets/Bottle/bottle_simple_modified.tscn" id="7_0e82a"]
+[ext_resource type="PackedScene" uid="uid://crcktgtfmray0" path="res://Assets/Bottle/BottlePieces.glb" id="13_o8t5j"]
 
 [sub_resource type="Sky" id="Sky_c77c4"]
 
@@ -59,7 +63,7 @@ height = 0.2
 
 [node name="SceneRoot" type="Node3D" unique_id=612120488 node_paths=PackedStringArray("item_spawn_point")]
 script = ExtResource("1_8vsrk")
-items = Array[PackedScene]([ExtResource("7_0e82a")])
+items = Array[PackedScene]([ExtResource("7_0e82a"), ExtResource("3_7g1pw"), ExtResource("4_o8t5j"), ExtResource("5_4s6sc")])
 min_items = 1
 max_items = 3
 item_spawn_radius = 0.2
@@ -347,5 +351,6 @@ mesh = SubResource("SphereMesh_s1b4b")
 
 [node name="BottleSimple" parent="." unique_id=536437476 instance=ExtResource("7_0e82a")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 2.4863515, 0.9246298, -1.94047)
+broken_model = ExtResource("13_o8t5j")
 
 [editable path="RegisterNode"]

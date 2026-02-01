@@ -12,5 +12,5 @@ albedo_texture = ExtResource("4_uo83q")
 script = ExtResource("2_dj4r6")
 tex = ExtResource("3_dj4r6")
 
-[node name="ES" parent="." index="0" unique_id=671500187]
+[node name="ES" parent="." index="0" unique_id=671500187 groups=["pickable"]]
 surface_material_override/0 = SubResource("StandardMaterial3D_j5g5h")
