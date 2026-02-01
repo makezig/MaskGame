@@ -1,9 +1,9 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://m4237bl42f30"]
 
-[ext_resource type="Texture2D" path="res://Assets/Materials/New folder/Wall_BaseColor.png" id="1_jkprj"]
-[ext_resource type="Texture2D" path="res://Assets/Materials/New folder/Wall_Metallic.png" id="2_mxeyg"]
-[ext_resource type="Texture2D" path="res://Assets/Materials/New folder/Wall_Normal.png" id="3_1n2cj"]
-[ext_resource type="Texture2D" path="res://Assets/Materials/New folder/Wall_Roughness.png" id="4_md237"]
+[ext_resource type="Texture2D" uid="uid://xkmcnrxchwbg" path="res://Assets/Materials/New folder/Wall_BaseColor.png" id="1_jkprj"]
+[ext_resource type="Texture2D" uid="uid://bplqervcjlu3c" path="res://Assets/Materials/New folder/Wall_Metallic.png" id="2_mxeyg"]
+[ext_resource type="Texture2D" uid="uid://6ujtbn8a65c0" path="res://Assets/Materials/New folder/Wall_Normal.png" id="3_1n2cj"]
+[ext_resource type="Texture2D" uid="uid://cfix0tg7l6d16" path="res://Assets/Materials/New folder/Wall_Roughness.png" id="4_md237"]
 
 [resource]
 albedo_color = Color(0.78775924, 0.78775924, 0.78775924, 1)
