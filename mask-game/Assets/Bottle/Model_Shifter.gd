@@ -3,8 +3,7 @@ extends Node3D
 @export var broken_model:PackedScene;
 @export var simple_model:Node3D;
 
-func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+func _on_area_3d_area_entered(Break: Area3D) -> void:
 		
 		var bottle_transform: Transform3D = simple_model.global_transform
 		print_debug(bottle_transform)
@@ -24,4 +23,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		print("Bottle parent:", get_parent().name)
 		
 		self.queue_free(); #Destroy model
-		

@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://d1suiasio656j" path="res://Scenes/Register_Scene.tscn" id="3_o15vh"]
 [ext_resource type="PackedScene" uid="uid://5siooecfnevj" path="res://Assets/Bottle/beer_basket_modified.tscn" id="4_o8t5j"]
 [ext_resource type="PackedScene" uid="uid://boxmardtlfbbt" path="res://Npc/boss.tscn" id="4_o15vh"]
-[ext_resource type="Material" uid="uid://m4237bl42f30" path="res://new_standard_material_3d.tres" id="4_s1b4b"]
+[ext_resource type="Material" path="res://new_standard_material_3d.tres" id="4_s1b4b"]
 [ext_resource type="Material" uid="uid://1qpr78ga3wun" path="res://Dark_standard_material_3d.tres" id="4_snxwr"]
 [ext_resource type="Script" uid="uid://b44cacrj5rgxy" path="res://Npc/BossMoving.gd" id="4_ymtjv"]
-[ext_resource type="PackedScene" uid="uid://dy01nfm6c7g03" path="res://Assets/es_modified.tscn" id="5_4s6sc"]
+[ext_resource type="PackedScene" uid="uid://bjlrcf6fawaan" path="res://Assets/es_modified.tscn" id="5_4s6sc"]
 [ext_resource type="Script" uid="uid://d0uup50kedtvn" path="res://Scenes/core_game_loop.gd" id="6_2a20n"]
 [ext_resource type="PackedScene" uid="uid://b7iacfodeotyg" path="res://Assets/Bottle/bottle_simple_modified.tscn" id="7_0e82a"]
 
@@ -59,6 +59,9 @@ radius = 0.1996425
 [sub_resource type="SphereMesh" id="SphereMesh_s1b4b"]
 radius = 0.2
 height = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7g1pw"]
+size = Vector3(33.07006, 42.19986, 1)
 
 [node name="SceneRoot" type="Node3D" unique_id=612120488 node_paths=PackedStringArray("item_spawn_point")]
 script = ExtResource("1_8vsrk")
@@ -347,5 +350,48 @@ shape = SubResource("SphereShape3D_0e82a")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D5" unique_id=995544024]
 mesh = SubResource("SphereMesh_s1b4b")
+
+[node name="BreakObject" type="Node3D" parent="." unique_id=692818111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.86453, 0, -4.2243805)
+
+[node name="Area3D6" type="Area3D" parent="BreakObject" unique_id=1946384201]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.8627, 0, 4.463787)
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakObject/Area3D6" unique_id=1809857397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8227124, 7.29245, 0)
+shape = SubResource("BoxShape3D_7g1pw")
+
+[node name="Area3D5" type="Area3D" parent="BreakObject" unique_id=20445302]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -26.353333, 0, -2.7618818)
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakObject/Area3D5" unique_id=1761510854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8227124, 7.29245, 0)
+shape = SubResource("BoxShape3D_7g1pw")
+
+[node name="Area3D4" type="Area3D" parent="BreakObject" unique_id=1983048983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1796227, 0, 12.2516)
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakObject/Area3D4" unique_id=73062386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8227124, 7.29245, 0)
+shape = SubResource("BoxShape3D_7g1pw")
+
+[node name="Area3D2" type="Area3D" parent="BreakObject" unique_id=1949299270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5898113, 0, -6.1983223)
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakObject/Area3D2" unique_id=803046567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8227124, 7.29245, 0)
+shape = SubResource("BoxShape3D_7g1pw")
+
+[node name="Area3D3" type="Area3D" parent="BreakObject" unique_id=273035550]
+transform = Transform3D(1.9106855e-15, 1, -4.371139e-08, 4.371139e-08, -4.371139e-08, -1, -1, 0, -4.371139e-08, 1.1717105, 0, 9.250349)
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakObject/Area3D3" unique_id=1897713056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.795287, -5.904007, -1.4305117e-06)
+shape = SubResource("BoxShape3D_7g1pw")
 
 [editable path="RegisterNode"]

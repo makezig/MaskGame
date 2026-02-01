@@ -23,6 +23,8 @@ size = Vector2(30, 30)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ymfeu"]
 size = Vector3(30, 1, 30)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rbuhp"]
+
 [node name="CollisionTesting" type="Node" unique_id=2087536691]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=782738250]
@@ -45,10 +47,18 @@ shape = SubResource("BoxShape3D_ymfeu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55761385, 0.35674787, 3.2663717)
 
 [node name="BottleSimple" parent="." unique_id=536437476 instance=ExtResource("1_a0wi7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31754267, 2, -1.8055112)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0068576336, 2, 0.011262)
 
 [node name="BeerBasket" parent="." unique_id=1440217052 instance=ExtResource("3_rbuhp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18681264, 0.0024381876, -0.6851433)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7538722, 0.0024381876, -0.6851433)
 
 [node name="BananaSimple" parent="." unique_id=317134046 instance=ExtResource("1_rbuhp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.289316, 0.05982772, -0.2691356)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0019277334, 1.2998265, -0.2691356)
+
+[node name="Break" type="Node3D" parent="." unique_id=943733256]
+
+[node name="Area3D" type="Area3D" parent="Break" unique_id=1542779376]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Break/Area3D" unique_id=1796808916]
+shape = SubResource("BoxShape3D_rbuhp")
