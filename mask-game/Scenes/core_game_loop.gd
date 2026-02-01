@@ -118,7 +118,7 @@ func mood_degradation(delta: float):
 
 
 func game_over(delta):
-	if fail_count == max_fails:
+	if fail_count >= max_fails:
 		main_level.show_game_over_screen()
 
 func get_ui() -> Node:
