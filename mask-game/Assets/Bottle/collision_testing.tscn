@@ -41,9 +41,6 @@ mesh = SubResource("PlaneMesh_plgh6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4975617, 0)
 shape = SubResource("BoxShape3D_ymfeu")
 
-[node name="BananaSimple" parent="StaticBody3D" unique_id=317134046 instance=ExtResource("1_rbuhp")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1, 0.3753652, -1)
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=577185469]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55761385, 0.35674787, 3.2663717)
 
@@ -51,4 +48,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55761385, 0.35674787, 3.26
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31754267, 2, -1.8055112)
 
 [node name="BeerBasket" parent="." unique_id=1440217052 instance=ExtResource("3_rbuhp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09889877, 0.059141256, -1.2289517)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18681264, 0.0024381876, -0.6851433)
+
+[node name="BananaSimple" parent="." unique_id=317134046 instance=ExtResource("1_rbuhp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.289316, 0.05982772, -0.2691356)

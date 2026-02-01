@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://5siooecfnevj"]
 
 [ext_resource type="PackedScene" uid="uid://b7iacfodeotyg" path="res://Assets/Bottle/bottle_simple_modified.tscn" id="1_pw4we"]
-[ext_resource type="PackedScene" uid="uid://crcktgtfmray0" path="res://Assets/Bottle/BottlePieces.glb" id="2_5u32p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4ef4"]
 resource_name = "Material.003"
@@ -61,36 +60,27 @@ shape = SubResource("ConcavePolygonShape3D_pw4we")
 
 [node name="BottleSimple" parent="." unique_id=536437476 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, -0.22282225, 0.0506375, 0.2817718)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple2" parent="." unique_id=1320813247 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, -0.0021662787, 0.04584813, 0.2759816)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple3" parent="." unique_id=263949046 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 0.20766072, 0.04584813, 0.2807942)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple4" parent="." unique_id=1328261977 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, -0.22334363, 0.04584813, 0.0076429863)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple5" parent="." unique_id=2146031871 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, -0.0059694164, 0.04584813, 0.006333499)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple6" parent="." unique_id=630781666 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 0.21009527, 0.04584813, 0.005024012)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple7" parent="." unique_id=145708325 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, -0.22334363, 0.04584813, -0.2778243)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple8" parent="." unique_id=1893745170 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, -0.007278871, 0.04584813, -0.28044328)
-broken_model = ExtResource("2_5u32p")
 
 [node name="BottleSimple9" parent="." unique_id=27191435 instance=ExtResource("1_pw4we")]
 transform = Transform3D(1.87, 0, 0, 0, 1.87, 0, 0, 0, 1.87, 0.21009527, 0.04584813, -0.2778243)
-broken_model = ExtResource("2_5u32p")
