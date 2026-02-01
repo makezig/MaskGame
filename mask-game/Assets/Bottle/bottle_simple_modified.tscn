@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://b7iacfodeotyg"]
 
-[ext_resource type="PackedScene" uid="uid://crcktgtfmray0" path="res://Assets/Bottle/BottlePieces.glb" id="2_dunvp"]
+[ext_resource type="PackedScene" uid="uid://cjiufv82rre1p" path="res://Assets/Bottle/bottle_pieces_modified.tscn" id="2_dunvp"]
 [ext_resource type="Script" uid="uid://cwu5n6p34xhvv" path="res://Assets/Bottle/Model_Shifter.gd" id="2_tuitb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vj7a"]

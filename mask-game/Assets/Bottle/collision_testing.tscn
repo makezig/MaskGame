@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b7iacfodeotyg" path="res://Assets/Bottle/bottle_simple_modified.tscn" id="1_a0wi7"]
 [ext_resource type="PackedScene" uid="uid://cjiufv82rre1p" path="res://Assets/Bottle/bottle_pieces_modified.tscn" id="2_elnqx"]
+[ext_resource type="PackedScene" uid="uid://5siooecfnevj" path="res://Assets/Bottle/beer_basket_modified.tscn" id="3_rbuhp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wbm7n"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -46,3 +47,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55761385, 0.35674787, 3.26
 [node name="BottleSimple" parent="." unique_id=536437476 instance=ExtResource("1_a0wi7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31754267, 2, -1.8055112)
 broken_model = ExtResource("2_elnqx")
+
+[node name="BeerBasket" parent="." unique_id=1440217052 instance=ExtResource("3_rbuhp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09889877, 0.059141256, -1.2289517)

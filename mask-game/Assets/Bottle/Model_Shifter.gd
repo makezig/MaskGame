@@ -3,9 +3,6 @@ extends Node3D
 @export var broken_model:PackedScene;
 @export var simple_model:Node3D;
 
-func ready():
-	print_tree_pretty()
-
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		
@@ -17,6 +14,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		broken_model_inst.set_centre(bottle_transform.origin)	
 		
 		#get_parent().add_child(broken_model_inst);
+		
 		get_tree().current_scene.add_child(broken_model_inst)
 		broken_model_inst.global_transform = bottle_transform
 		
