@@ -262,11 +262,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31005824, 3.4256096, -11.9
 [node name="Inactive" type="Node3D" parent="BossStuff" unique_id=83088426]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0903773, 3.5414133, -14.039294)
 
-[node name="CoreGameLoop" type="Node" parent="." unique_id=376331103 node_paths=PackedStringArray("boss", "npc", "item_spawn_point")]
+[node name="CoreGameLoop" type="Node" parent="." unique_id=376331103 node_paths=PackedStringArray("boss", "npc", "item_spawn_point", "main_level")]
 script = ExtResource("6_2a20n")
 boss = NodePath("../BossStuff")
 npc = NodePath("../NPCSpawner")
 item_spawn_point = NodePath("../ItemSpawnPoint")
+main_level = NodePath("..")
+fail_count = 3
 
 [node name="Node3D" type="RigidBody3D" parent="." unique_id=1836306242 groups=["pickable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8279123, 1.2267189, -4.1503124)

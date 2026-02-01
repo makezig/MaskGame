@@ -3,9 +3,10 @@ extends Node
 @export var boss: Node3D
 @export var npc: Node3D
 @export var item_spawn_point: Node3D
+@export var main_level: Node3D
 
 #Current fails and max fail count
-var fail_count: int = 0
+@export var fail_count: int = 0
 var max_fails: int = 3
 #Mood counter (low bad, high good)
 var mood: float
@@ -25,15 +26,12 @@ func _process(delta: float) -> void:
 
 
 func npc_item_spawn_loop(delta: float):
-	#spawn item to spawn point
-	#spawn next when last item was scanned (beeped)
-	
 	pass
 
 func boss_timer(delta: float):
 	boss_clock -= delta
 	if boss_clock <= 0:
-		# toggle_active_to_inactive
+		#toggle_active_to_inactive
 		boss.toggle_active_inactive()
 		#reset timer
 		boss_clock = 5
@@ -44,4 +42,5 @@ func mood_degradation(delta: float):
 	pass
 
 func game_over(delta):
-	pass #TODO: Add game over screen and return to main screne
+	if fail_count == max_fails:
+		main_level.show_game_over_screen()

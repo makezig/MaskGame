@@ -7,12 +7,13 @@ extends Node3D
 
 # Preload item scenes
 var items: Array = [
-	preload("res://Assets/Bottle/bottle_pieces_modified.tscn")
+	preload("res://Assets/Bottle/bottle_simple_modified.tscn")
 ]
 
 
 #Scene refrences needed for gameloop
 const PAUSE_MENU_SCENE := "res://UI/PauseMenu.tscn"
+const GAME_OVER_SCENE := "res://UI/GameOverMenu.tscn"
 
 # Variables to control random spawning
 @export var min_items: int = 3
@@ -21,6 +22,7 @@ const PAUSE_MENU_SCENE := "res://UI/PauseMenu.tscn"
 
 #Variables
 var pause_menu: Control = null
+var game_over: Control = null
 @export var item_spawn_point: Node3D
 
 func _ready() -> void:
@@ -43,8 +45,7 @@ func _input(event):
 		else:
 			show_pause_menu()
 
-
-#Pasuse Menu helper functions
+#Pause Menu helper functions
 func show_pause_menu():
 	if pause_menu == null:
 		# Load the pause menu scene
@@ -62,6 +63,15 @@ func resume_game():
 		pause_menu.visible = false
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+# game over
+func show_game_over_screen():
+	if game_over == null:
+		var scene_res = load(GAME_OVER_SCENE)
+		game_over = scene_res.instantiate() as Control
+		add_child(game_over)
+	game_over.game_over()
+	
 
 func spawn_items():
 	if not item_spawn_point:
