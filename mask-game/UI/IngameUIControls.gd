@@ -50,7 +50,7 @@ func _process(delta):
 	clock.text = "%02d:%02d" % [minutes, seconds]
 
 func set_failcounter(count: int):
-	var fails = 3-count
+	var fails = 10-count
 	fail_label.text = fail_count_text + str(fails)
 
 #Call if you want to update both face and color

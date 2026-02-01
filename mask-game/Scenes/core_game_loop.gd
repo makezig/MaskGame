@@ -15,7 +15,7 @@ enum UIState {
 
 #Current fails and max fail count
 @export var fail_count: int = 0
-var max_fails: int = 3
+var max_fails: int = 10
 #Mood counter (low bad, high good)
 var mood: float = 100
 #Timer untill boss changes state
@@ -57,9 +57,13 @@ func _check_new_pickables():
 			
 func _on_pickable_destroyed(obj: Node3D) -> void:
 	print("Pickable destroyed:", obj.name)
+	var ui := get_tree().get_first_node_in_group("ui")
+	if not ui:
+		return
+		
 	if boss.moving_to_active:  # Boss is active → fail
 		fail_count += 1
-		print("Fail triggered! Current fail count:", fail_count)
+		ui.set_failcounter(fail_count)
 	else:  # Boss inactive → increase mood
 		mood += 10
 		mood = clamp(mood, 0, 100)

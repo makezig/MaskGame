@@ -349,6 +349,7 @@ npc = NodePath("../NPCSpawner")
 item_spawn_point = NodePath("../ItemSpawnPoint")
 main_level = NodePath("..")
 npc_spawner = NodePath("../NPCSpawner")
+fail_count = null
 
 [node name="Node3D" type="RigidBody3D" parent="." unique_id=1836306242 groups=["pickable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5774958, 1.2267189, 3.764803)
