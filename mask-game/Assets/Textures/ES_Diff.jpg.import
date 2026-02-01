@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdm54yumflo8h"
-path.s3tc="res://.godot/imported/MadUIMask.png-9e85a2af8ecf60235a90d4cf447c8832.s3tc.ctex"
+uid="uid://bh3q6gwfnpqs"
+path.s3tc="res://.godot/imported/ES_Diff.jpg-872403e5cc03fa80380829d493094c21.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://UI/MaskIMGs/MadUIMask.png"
-dest_files=["res://.godot/imported/MadUIMask.png-9e85a2af8ecf60235a90d4cf447c8832.s3tc.ctex"]
+source_file="res://Assets/Textures/ES_Diff.jpg"
+dest_files=["res://.godot/imported/ES_Diff.jpg-872403e5cc03fa80380829d493094c21.s3tc.ctex"]
 
 [params]
 
